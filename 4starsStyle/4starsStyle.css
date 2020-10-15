@@ -10,12 +10,27 @@
   padding-bottom: 20px;
   width: 200px;
   font-size: 20px;
+  font-weight: bold;
   text-decoration: none;
+}
+.sticky{
+  position:fixed;
+  top:0;
+  width:100%;
+}
+.sticky + .content {
+  padding-top:100px;
+}
+.left{
+  float:left;
+}
+.right{
+  float:right;
 }
 body {
   background-color: #faf5ec;
   font-size: 20px;
-  min-height: 100%;
+  height: 100%;
 }
 h1 {
   color: #be3439;
@@ -32,6 +47,9 @@ p {
   font-family: "Times New Roman", times, serif;
   font-size: 20px;
 }
+section{
+  padding-bottom: 100px;
+}
 .dropbtn {
   background-color: #faf5ec;
   color: #eebe2f;
@@ -40,6 +58,7 @@ p {
   width: 200px;
   font-size: 20px;
   font-family: "Times New Roman", times, serif;
+  font-weight: bold;
   text-decoration: none;
   border: none;
 }
@@ -61,6 +80,7 @@ p {
   width: 200px;
   text-decoration: none;
   font-family: "Times New Roman", times, serif;
+  font-weight: bold;
   display: block;
 }
 .navbar a:hover, .dropbtn:hover{
@@ -70,7 +90,7 @@ p {
 .dropbtn:focus{outline:none;}
 
 .footer{
-  position:fixed;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
