@@ -32,6 +32,12 @@ p {
   font-family: "Times New Roman", times, serif;
   font-size: 20px;
 }
+ul {
+  color: #be3439;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
 .dropbtn {
   background-color: #faf5ec;
   color: #eebe2f;
