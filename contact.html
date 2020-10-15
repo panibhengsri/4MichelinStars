@@ -6,9 +6,9 @@
         <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
         <style>
             @media screen and (max-width: 1560px) {
-                #pageSubHeader {
-                    height: 200px;
 
+                #pageSubHeader {
+                    height: 800px;
                 }
 
                 #logoRed {
@@ -55,6 +55,20 @@
                     height: 200px;
                     resize: none;
                 }
+
+                /* scroll icon */
+                .scrollButton{
+                    position: relative;
+                    justify-content: center;
+                }
+
+                #arrowDown {
+                    position: absolute;
+                    top: 30px;
+                    width: 60px;
+                    height: 60px;
+                    left: 50%;
+                }
             }
         </style>
     </head>
@@ -81,42 +95,43 @@
                 </div>
             </div>
         </div>
-
-        <div id = "pageSubHeader">
+        <div id="pageSubHeader">
             <div id="logoRed">
-            
+        
             </div>
-            <h3 style = "text-align: center;">
+            <h3 style="text-align: center;">
                 Contact Us
             </h3>
-        </div>
-
-        <div id = "contactContainer">
-            <div id = "contactBox">
-                <form>
-                    <div>
-                        <input class="inputIdentity" type="text" id="name" name="name" placeholder="NAME">
-                    </div>
-                    <div>
-                        <input class="inputIdentity" type="text" id="email" name="email" placeholder="EMAIL">
-                    </div>
-                    <div>
-                        <input class="inputIdentity" type="text" id="resID" name="resID" placeholder="Reservation ID if applicable">
-                    </div>
-                    <div>
-                        <textarea class="inputMessage" placeholder="Write message here"></textarea>
-                    </div>
-                    <div>
-                        <input type="submit" value="SEND">
-                    </div>
-                
-                </form>
-            </div>
-            <div id="picture">
+            <div id="contactContainer">
+                <div id="contactBox">
+                    <form>
+                        <div>
+                            <input class="inputIdentity" type="text" id="name" name="name" placeholder="NAME">
+                        </div>
+                        <div>
+                            <input class="inputIdentity" type="text" id="email" name="email" placeholder="EMAIL">
+                        </div>
+                        <div>
+                            <input class="inputIdentity" type="text" id="resID" name="resID"
+                                placeholder="Reservation ID if applicable">
+                        </div>
+                        <div>
+                            <textarea class="inputMessage" placeholder="Write message here"></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="SEND">
+                        </div>
             
+                    </form>
+                </div>
+                <div id="picture">
+            
+                </div>
             </div>
         </div>
-
+        <a class="scrollButton" href="./locations.html"><img id="arrowDown" alt="Arrow Down Icon"
+                        src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"></a>
+        <br/><br /><br /><br />
         <!-- CODE FOR FOOTER -->
         <div class="footer">
             <div class="img-container">
