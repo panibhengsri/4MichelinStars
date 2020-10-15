@@ -1,88 +1,158 @@
 <!DOCTYPE html>
 <html>
   <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
-    <!-- <link rel="stylesheet" href="style.css"> --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
     <meta charset="utf-8">
     <title>Menu</title>
   </head>
-  <body>
-    <header> 
-    </header>
 
-     <!-- CODE FOR HEADER -->
-    <div class="navbar">
-        <img src="./4starsStyle/4starsLogo.png" style="height:25px; float:left; margin: 15px;" alt="logo">
-        <a href="./index.html">home</a>
-        <div class="dropdown">
-          <button class="dropbtn">about us</button>
-            <div class="dropdown-content">
-              <a href="./about.html">our story</a>
-              <a href="./locations.html">locations</a>
-              <a href="./review.html">reviews</a>
+  <style>
+
+    .item {
+        width: 100%;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container>div {
+        flex: 0 50%;
+        box-sizing:border-box;
+    }
+
+  </style>
+
+  <body>
+
+    <div class="stars">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star1.png">
+            <img class="star" src="./4starsStyle/star2.png">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star1.png">
+            <img class="star" src="./4starsStyle/star2.png">
+        </div>
+        <!-- CODE FOR HEADER -->
+        <div class="header">
+            <div>
+                <a class="logo" href="./index.html"><img src="./4starsStyle/4starsLogo.png" id="logoImg" alt="logo"></a>
+            </div>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button onclick="location.href='./menu.html'" type="button" class="dropbtn menubtn">Menu</button>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">About Us</button>
+                    <div class="dropdown-content">
+                        <a class="hlpage" href="./about.html">Our Story</a>
+                        <a class="hlpage" href="./locations.html">Locations</a>
+                        <a class="hlpage" href="./review.html">Reviews</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Get in Touch</button>
+                    <div class="dropdown-content">
+                        <a class="hlpage" href="./contact.html">Contact Us</a>
+                        <a class="hlpage" href="./reserve.html">Reservations</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <a href="./menu.html">menu</a>
-        <div class="dropdown">
-          <button class="dropbtn">get in touch</button>
-            <div class="dropdown-content">
-              <a href="./contact.html">contact</a>
-              <a href="./reserve.html">reservations</a>
-            </div>
-        </div>
-    </div>
+
 
     <article>
         <section>
-            <h2> Appetizers </h2>
-                <ul>
-                    <li>Thai Pomelo salad with char-grilled scarlet prawns, Asian 
-                        citron, chili jam and gapi khoei paste</li>
-                    <li>Authentic Chinese Sesame Jellyfish tossed in traditional
-                         Chilli Sauce</li>
-                    <li>Taiwanese smashed cucumbers with seasame oil and 
-                        garlic</li>
-                    <li>Crispy Kimichijeon (Kimchi Pancake) with scallions and 
-                        Gochujang sauce</li>
-                </ul>
-            <h2> Mains </h2>
-                <ul>
-                    <li>Giant grilled river prawn wrapped in Mulberry Leaves 
-                        and tamarind sauce</li>
-                    <li>Mei Cai Kou Rou (Steamed Pork Belly) with preserved 
-                        mustard greens and Jasmine rice</li>
-                    <li>Taiwanese style beef noodles with baby bok choy 
-                        and braised shank </li>
-                    <li>Dolsot Bibimbap with choice meat served in a hot 
-                        stone bowl</li>
-                </ul>
-            <h2> Desserts </h2>
-                <ul>
-                    <li>Thai Kanom Chan, Steamed Pandan and Jasmine 
-                        Layered Coconut Cake</li>
-                    <li>Hong Kong style Egg Waffle Cane with choice 
-                        icecream and toppings</li>
-                    <li>Korean Bingsu, shaved ice dessert with sweet toppings</li>
-                    <li>Taiwanese Pinepapple Cake with a crisp crust and gooey 
-                        pineapple filling</li>
-                </ul>
-            <h2> Drinks </h2>
-                <ul>
-                    <li>Lemongrass anad Ginger Thai Mojito</li>
-                    <li>Vanilla Chai Baileys Boba</li>
-                    <li>Yakult Soju Shots</li>
-                    <li>Oolong Lychee Martini</li>
-                </ul>
+            <div class="container">
+                <div class = "item">
+                    <br><br>
+                    <h1 style="text-align: center;"> appetizers </h2>
+                        <ul>
+                            <li>Thai Pomelo salad with char-grilled scarlet prawns, Asian 
+                                citron, chili jam and gapi khoei paste</li><br>
+                            <li>Authentic Chinese Sesame Jellyfish tossed in traditional
+                                Chilli Sauce</li><br>
+                            <li>Taiwanese smashed cucumbers with seasame oil and 
+                                garlic</li><br>
+                            <li>Crispy Kimichijeon (Kimchi Pancake) with scallions and 
+                                Gochujang sauce</li><br>
+                        </ul>
+                    <br><br>
+                </div>
+                <div class = "item">
+                    INSERT PHOTO HERE
+                </div>
+
+                <div class = "item">
+                    INSERT PHOTO HERE
+                </div>
+
+                <div class = "item">
+                    <br><br>
+                    <h1 style="text-align: center;"> mains </h2>
+                        <ul>
+                            <li>Giant grilled river prawn wrapped in Mulberry Leaves 
+                                and tamarind sauce</li><br>
+                            <li>Mei Cai Kou Rou (Steamed Pork Belly) with preserved 
+                                mustard greens and Jasmine rice</li><br>
+                            <li>Taiwanese style beef noodles with baby bok choy 
+                                and braised shank </li><br>
+                            <li>Dolsot Bibimbap with choice meat served in a hot 
+                                stone bowl</li><br>
+                        </ul>
+                    <br><br>
+                </div>
+
+                <div class = "item">
+                    <br><br>
+                    <h1 style="text-align: center;"> desserts </h2>
+                        <ul>
+                            <li>Thai Kanom Chan, Steamed Pandan and Jasmine 
+                                Layered Coconut Cake</li><br>
+                            <li>Hong Kong style Egg Waffle Cane with choice 
+                                icecream and toppings</li><br>
+                            <li>Korean Bingsu, shaved ice dessert with sweet 
+                                toppings</li><br>
+                            <li>Taiwanese Pinepapple Cake with a crisp crust and gooey 
+                                pineapple filling</li><br>
+                        </ul>
+                    <br><br>
+                </div>
+
+                <div class = "item">
+                    INSERT PHOTO
+                </div>
+
+                <div class = "item">
+                    INSERT PHOTO
+                </div>
+
+                <div class = "item">
+                    <br><br>
+                    <h1 style="text-align: center;"> drinks </h2>
+                        <ul>
+                            <li>Lemongrass and Ginger Thai Mojito</li><br>
+                            <li>Vanilla Chai Baileys Boba</li><br>
+                            <li>Yakult Soju Shots</li><br>
+                            <li>Oolong Lychee Martini</li><br>
+                        </ul>
+                    <br><br>
+                </div>
+            </div>
+
         </section>
     </article>
 
     <div class="footer">
             <div class="img-container">
-             <img src="./4starsStyle/4starsLogoRed.png" style="height: 20px; margin-top: 15px;" alt="logo, red">
-           </div>
+                <img src="./4starsStyle/4starsLogoRed.png" style="height: 20px; margin-top: 15px;" alt="logo, red">
+            </div>
             <h2 style="color:#be3439; text-align:center; font-size: 20px; margin-top:0px;">4 STARS</h2>
-          </div>
+        </div>
 
   </body>
 </html>

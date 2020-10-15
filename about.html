@@ -7,7 +7,7 @@
         <style>
             @media screen and (max-width: 1560px) {
                 body {
-                    background-image: linear-gradient(-59deg, #6c3 10%, rgb(250,245,235) 50%);
+                    /* background-image: linear-gradient(-59deg, #be3439 10%,  #fae7d0 50%); */
                 }
 
                 #chefBG {
@@ -168,27 +168,42 @@
     </head>
 
     <body>
+        <div class="stars">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star1.png">
+            <img class="star" src="./4starsStyle/star2.png">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star1.png">
+            <img class="star" src="./4starsStyle/star2.png">
+        </div>
         <!-- CODE FOR HEADER -->
-        <div class="navbar">
-            <img src="./4starsStyle/4starsLogo.png" style="height:25px; float:left; margin: 15px;" alt="logo">
-            <a href="./index.html">home</a>
-            <div class="dropdown">
-                <button class="dropbtn">about us</button>
-                <div class="dropdown-content">
-                    <a href="./about.html">our story</a>
-                    <a href="./locations.html">locations</a>
-                    <a href="./review.html">reviews</a>
+        <div class="header">
+            <div>
+                <a class="logo" href="./index.html"><img src="./4starsStyle/4starsLogo.png" id="logoImg" alt="logo"></a>
+            </div>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button onclick="location.href='./menu.html'" type="button" class="dropbtn menubtn">Menu</button>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">About Us</button>
+                    <div class="dropdown-content">
+                        <a class="hlpage" href="./about.html">Our Story</a>
+                        <a class="hlpage" href="./locations.html">Locations</a>
+                        <a class="hlpage" href="./review.html">Reviews</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Get in Touch</button>
+                    <div class="dropdown-content">
+                        <a class="hlpage" href="./contact.html">Contact Us</a>
+                        <a class="hlpage" href="./reserve.html">Reservations</a>
+                    </div>
                 </div>
             </div>
-            <a href="#menu">menu</a>
-            <div class="dropdown">
-                <button class="dropbtn">get in touch</button>
-                <div class="dropdown-content">
-                    <a href="./contact.html">contact</a>
-                    <a href="./reserve.html">reservations</a>
-                </div>
-            </div>
-        </div>  
+        </div>
         <div class = "parallax" id = "chefBG">
             <h2>
                 Taste authentic Asia
@@ -263,11 +278,6 @@
             </div>
         </div>
         <br/>
-        <br />
-        <a class="scrollButton" href="./locations.html"><img id = "arrowDown" alt="Arrow Down Icon"
-                src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"></a>
-        <br />
-        <br />
         <br />
         <br />
                 <br />
