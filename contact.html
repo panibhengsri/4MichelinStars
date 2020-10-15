@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
+        <style>
+            @media screen and (max-width: 1560px) {
+                #pageSubHeader {
+                    height: 200px;
+
+                }
+
+                #logoRed {
+                    height: 100px;
+                    width: 420px;
+                    margin: 0 auto;
+
+                    background-image: url("./4starsStyle/4starsLogoRed.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    
+                }
+
+                #contactContainer {
+                    height: 100px;
+                    text-align: center;
+
+                    display:flex;
+                    justify-content: space-between;
+                }
+
+                #contactBox {
+                    margin: 0 auto;
+                }
+
+                #picture {
+                    height: 600px;
+                    width: 500px;
+
+                    margin: 0 auto;
+                    background-image: url("./4starsStyle/contact/horizontalInside.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position-y: -100px;;
+                }
+
+                .inputIdentity {
+                    width: 400px;
+                    height: 30px;
+                }
+
+                .inputMessage {
+                    width: 400px;
+                    height: 200px;
+                    resize: none;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- CODE FOR HEADER -->
+        <div class="navbar">
+            <img src="./4starsStyle/4starsLogo.png" style="height:25px; float:left; margin: 15px;" alt="logo">
+            <a href="#home">home</a>
+            <div class="dropdown">
+                <button class="dropbtn">about us</button>
+                <div class="dropdown-content">
+                    <a href="./about.html">our story</a>
+                    <a href="#">locations</a>
+                    <a href="#">reviews</a>
+                </div>
+            </div>
+            <a href="#menu">menu</a>
+            <div class="dropdown">
+                <button class="dropbtn">get in touch</button>
+                <div class="dropdown-content">
+                    <a href="./contact.html">contact</a>
+                    <a href="#">reservations</a>
+                </div>
+            </div>
+        </div>
+
+        <div id = "pageSubHeader">
+            <div id="logoRed">
+            
+            </div>
+            <h3 style = "text-align: center;">
+                Contact Us
+            </h3>
+        </div>
+
+        <div id = "contactContainer">
+            <div id = "contactBox">
+                <form>
+                    <div>
+                        <input class="inputIdentity" type="text" id="name" name="name" placeholder="NAME">
+                    </div>
+                    <div>
+                        <input class="inputIdentity" type="text" id="email" name="email" placeholder="EMAIL">
+                    </div>
+                    <div>
+                        <input class="inputIdentity" type="text" id="resID" name="resID" placeholder="Reservation ID if applicable">
+                    </div>
+                    <div>
+                        <textarea class="inputMessage" placeholder="Write message here"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="SEND">
+                    </div>
+                
+                </form>
+            </div>
+            <div id="picture">
+            
+            </div>
+        </div>
+
+        <!-- CODE FOR FOOTER -->
+        <div class="footer">
+            <div class="img-container">
+                <img src="./4starsStyle/4starsLogoRed.png" style="height: 20px; margin-top: 15px;" alt="logo, red">
+            </div>
+            <h2 style="color:#be3439; text-align:center; font-size: 20px; margin-top:0px;">4 STARS</h2>
+        </div>
+    </body>
+
+</html>
