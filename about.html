@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
+        <style>
+            @media screen and (max-width: 1560px) {
+                body {
+                    background-image: linear-gradient(-59deg, #6c3 10%, rgb(250,245,235) 50%);
+                }
+
+                #chefBG {
+                    position: relative;
+                    height: 900px;
+
+                    background-image: url("./4starsStyle/about/asianChefSushi.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                .parallax {
+                    background-attachment: scroll;
+                }
+
+                #chefInfoContainer{
+                    position: relative;
+                    height: 250px;
+                    top: 56%;
+
+                    background-color: beige;
+                    
+                    display: flex;
+                    justify-content: center;
+                }
+
+                #chefProfile {
+                    position: relative;
+                    width: 190px;
+                    height: 190px;
+                    top: 20px;
+
+                    border-radius: 80px;
+                    background-image: url("./4starsStyle/about/asianGuyProfile.jpg");
+                    background-repeat:no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                #chefIntro {
+                    position: relative;
+                    width: 500px;
+                    top: 50px;
+                    padding-left: 30px;
+                }
+
+                #bgContainer {
+                    position: relative;
+                    /*margin-top: 120px;*/
+                    justify-content: center;
+                }
+
+                #explanationContainer {
+                    margin-top: 50px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                #slogan {
+                    position: relative;
+                    
+                    margin: 0 auto;
+                    text-align: center;
+                }
+
+                .valueExplain {
+                    position: relative;
+                    height: 100px;
+                    width: 400px;
+                    top: 120px;
+                }
+
+                #explanation {
+                    margin-left: 70px;
+                    padding-left: 20px;
+                    
+                    border-left: solid;
+                    border-width: 10px;
+                    border-color: aquamarine;
+                }
+
+                #explanation2 {
+                    margin-right: 70px;
+                    padding-right: 20px;
+                    
+                    border-right: solid;
+                    border-width: 10px;
+                    border-color: aquamarine;
+                }
+
+                .picture {
+                    height: 500px;
+                    width: 400px;
+
+                    background-color: red;
+                }
+
+                #originsContainer {
+                    margin-top: 50px;
+                    position: relative;
+                    height: 500px;
+                }
+
+                /* slideshow */
+                #slideshowContainer {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .slide {
+                    height: 400px;
+                    width: 600px;
+                    display: none;
+                }
+
+                .active {
+                    display: block;
+                }
+
+                /* Next & previous buttons */
+                .prev, .next {
+                    position: absolute;
+                    cursor: pointer;
+                    width: auto;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 50px;
+                    transition: 0.6s ease;
+                    border-radius: 0 3px 3px 0;
+                    user-select: none;
+                    top: 25%;
+                }
+
+                .prev {
+                    left: 300px;
+                }
+
+                /* Position the "next button" to the right */
+                .next {
+                    right: 300px;
+                    border-radius: 3px 0 0 3px;
+                }
+
+                /* scroll icon */
+                .scrollButton{
+                    position: relative;
+                    justify-content: center;
+                }
+
+                #arrowDown {
+                    position: relative;
+                    width: 60px;
+                    height: 60px;
+                    left: 50%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- CODE FOR HEADER -->
+        <div class="navbar">
+            <img src="./4starsStyle/4starsLogo.png" style="height:25px; float:left; margin: 15px;" alt="logo">
+            <a href="./index.html">home</a>
+            <div class="dropdown">
+                <button class="dropbtn">about us</button>
+                <div class="dropdown-content">
+                    <a href="./about.html">our story</a>
+                    <a href="./locations.html">locations</a>
+                    <a href="./review.html">reviews</a>
+                </div>
+            </div>
+            <a href="#menu">menu</a>
+            <div class="dropdown">
+                <button class="dropbtn">get in touch</button>
+                <div class="dropdown-content">
+                    <a href="./contact.html">contact</a>
+                    <a href="./reserve.html">reservations</a>
+                </div>
+            </div>
+        </div>  
+        <div class = "parallax" id = "chefBG">
+            <h2>
+                Taste authentic Asia
+            </h2>
+
+            <div id = "chefInfoContainer">
+                <div id="chefProfile">
+                
+                </div>
+                <div id = "chefIntro">
+                    <h4>
+                        With years of experience in culinary arts under his belt, chef Yao tirelessly practiced to preserve
+                        Taiwanese culture in his works. Born a Taiwanese national, at a young age he mastered recipe passed
+                        down for generations, and in every noodle he carefully etches the spirit of Taiwan.
+                    </h4>
+                </div>
+                <a class="prev" onclick="">&#10094;</a>
+                <a class="next" onclick="">&#10095;</a>
+            </div>
+        </div>
+        <div id = "bgContainer">
+            <div id = "explanationContainer">
+                <div class="picture">
+                
+                </div>
+                <div class = "valueExplain" id="explanation">
+                    <h3>
+                        Our passion is not only to make traditional Asian food more accessible around the world but also to do it right. 
+                        We ensure that you get to rekindle your cultural pallette regardless of where you are.
+                    </h3>
+                </div>
+            </div>
+            <div id="originsContainer">
+                <h3 style="text-align: center;">
+                    We bring home to you
+                </h3>
+                <div id="slideshowContainer">
+                    <div class="slide fade active">
+                        <img src="./4starsStyle/about/taipei.jpg" style="width:100%">
+                        <div class="text">Taiwan has a long history of traditional food. We're proud to present our main Taiwanise 
+                            dish, Beef Noodz, of which recipe was passed down for generations.
+                        </div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="./4starsStyle/about/hongkong.jpg" style="width:100%">
+                        <div class="text">We bring you from HongKong </div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="./4starsStyle/about/thailand.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="./4starsStyle/about/korea.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                </div>
+            </div>
+            <div id="explanationContainer">
+                <div class="valueExplain" id="explanation2">
+                    <h3>
+                        We take great care and effort in supporting the local
+                        agriculture, bringing the <em>freshest ingredients</em>
+                        to our kitchen, to your plate.
+                    </h3>
+                </div>
+                <div class="picture">
+            
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br />
+        <a class="scrollButton" href="./locations.html"><img id = "arrowDown" alt="Arrow Down Icon"
+                src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"></a>
+        <br />
+        <br />
+        <br />
+        <br />
+                <br />
+                <br />
+
+        <!-- CODE FOR FOOTER -->
+        <div class="footer">
+            <div class="img-container">
+                <img src="./4starsStyle/4starsLogoRed.png" style="height: 20px; margin-top: 15px;" alt="logo, red">
+            </div>
+            <h2 style="color:#be3439; text-align:center; font-size: 20px; margin-top:0px;">4 STARS</h2>
+        </div>
+    </body>
+    <script>
+        var currentSlide = 0;
+
+        function changeSlide(velocity) {
+            var slides = document.getElementsByClassName("slide");
+
+            if ( velocity < 0 ) {
+                if ( currentSlide == 0 ) {
+                    showSlide(slides, slides.length - 1);
+                }
+            }
+            else {
+
+            }
+        }
+
+        function showSlide(slides, index) {
+            for ( var indexSlides in slides ) {
+                if ( indexSlides == index ) {
+                    slides[index].style.display = "block";
+                }
+                else {
+                    slides[index].style.display = "none";
+                }
+            }
+        }
+
+
+    </script>
+</html>

@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
     <!-- <link rel="stylesheet" href="style.css"> --> 
     <meta charset="utf-8">
     <title>Menu</title>
   </head>
   <body>
     <header> 
-      <h1>Menu</h1>
     </header>
-    <nav>
-        <div class ="flex-container">
-            <div><a href="index.html"> <b> Home </b> </a></div>
-            <div><a href="contact.html"> <b> Contact </b> </a></div>
-            <div><a href="reserve.html"> <b> Reservations </b> </a></div>
-            <div><a href="locations.html"> <b> Locations </b> </a></div>
-            <div><a href="about.html"> <b> About Us </b> </a></div>
-            <div><a href="review.html"> <b> Customer Reviews </b> </a></div>
+
+     <!-- CODE FOR HEADER -->
+    <div class="navbar">
+        <img src="./4starsStyle/4starsLogo.png" style="height:25px; float:left; margin: 15px;" alt="logo">
+        <a href="./index.html">home</a>
+        <div class="dropdown">
+          <button class="dropbtn">about us</button>
+            <div class="dropdown-content">
+              <a href="./about.html">our story</a>
+              <a href="./locations.html">locations</a>
+              <a href="./review.html">reviews</a>
+            </div>
         </div>
-    </nav>
+        <a href="./menu.html">menu</a>
+        <div class="dropdown">
+          <button class="dropbtn">get in touch</button>
+            <div class="dropdown-content">
+              <a href="./contact.html">contact</a>
+              <a href="./reserve.html">reservations</a>
+            </div>
+        </div>
+    </div>
 
     <article>
         <section>
@@ -63,6 +76,13 @@
                 </ul>
         </section>
     </article>
+
+    <div class="footer">
+            <div class="img-container">
+             <img src="./4starsStyle/4starsLogoRed.png" style="height: 20px; margin-top: 15px;" alt="logo, red">
+           </div>
+            <h2 style="color:#be3439; text-align:center; font-size: 20px; margin-top:0px;">4 STARS</h2>
+          </div>
 
   </body>
 </html>
