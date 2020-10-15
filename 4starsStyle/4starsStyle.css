@@ -72,6 +72,7 @@ body {
     list-style: none;
     animation: animate 25s linear infinite;
     bottom: -150px;
+    z-index:-5;
 }
 
 .stars img:nth-child(1){
