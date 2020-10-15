@@ -3,36 +3,76 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
         <style type="text/css">
-            h1 {font-size:60; text-align:center;}
-            article {display: flex; flex-wrap: wrap;justify-content: center;}
-            .locName { border: solid #be3439; text-decoration:none; color:#000000; font-weight: bold; background: #eff3f8;}
-            .locName h2 {display:flex; padding-left:5px }
-            .locName ul li {display:flex; align-items: stretch; padding:5px 2px 5px 5px }
-            .locName ul{list-style-type: none;}
+            h1 {
+                text-align:center;
+                color:#eebe2f;
+                }
+            article {
+                display: flex; 
+                flex-wrap: wrap;
+                justify-content: center;
+                }
+            .locName { 
+                display: flex;
+                border: solid #be3439; 
+                text-decoration:none; 
+                color:#000000; 
+                font-weight: bold; 
+                flex-basis: 0;
+                background: #fae7d0;
+                }
+            .locName h2 {
+                /* display:flex;  */
+                padding-left:5px 
+                }
+            .locName ul li {
+                display:flex; 
+                /* align-items: stretch;  */
+                flex-wrap: wrap;
+                padding:5px 2px 5px 5px 
+                }
+            .locName ul{
+                list-style-type: none;
+                }
             
         </style>
 
     </head>
   
     <body>
+        <div class="stars">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star1.png">
+            <img class="star" src="./4starsStyle/star2.png">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star1.png">
+            <img class="star" src="./4starsStyle/star2.png">
+        </div>
         <!-- CODE FOR HEADER -->
-        <div class="navbar">
-            <img src="./4starsStyle/4starsLogo.png" style="height:25px; float:left; margin: 15px;" alt="logo">
-            <a href="./index.html">home</a>
-            <div class="dropdown">
-            <button class="dropbtn">about us</button>
-                <div class="dropdown-content">
-                <a href="./about.html">our story</a>
-                <a href="./locations.html">locations</a>
-                <a href="./review.html">reviews</a>
-                </div>
+        <div class="header">
+            <div>
+                <a class="logo" href="./index.html"><img src="./4starsStyle/4starsLogo.png" id="logoImg" alt="logo"></a>
             </div>
-            <a href="./menu.html">menu</a>
-            <div class="dropdown">
-            <button class="dropbtn">get in touch</button>
-                <div class="dropdown-content">
-                <a href="./contact.html">contact</a>
-                <a href="./reserve.html">reservations</a>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button onclick="location.href='./menu.html'" type="button" class="dropbtn menubtn">Menu</button>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">About Us</button>
+                    <div class="dropdown-content">
+                        <a class="hlpage" href="./about.html">Our Story</a>
+                        <a class="hlpage" href="./locations.html">Locations</a>
+                        <a class="hlpage" href="./review.html">Reviews</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Get in Touch</button>
+                    <div class="dropdown-content">
+                        <a class="hlpage" href="./contact.html">Contact Us</a>
+                        <a class="hlpage" href="./reserve.html">Reservations</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,11 +87,32 @@
                 <h2>Bangkok, Thailand</h2> <br>
                 <div> 
                     <ul>
-                        <li>Address: </li>
-                        <li>Contact: </li>
-                        <li>Find on Map:                      
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.479244635132!2d100.4891229148305!3d13.74994809034869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2990f1400adc9%3A0xc7c8e2e28e73a435!2sThe%20Grand%20Palace!5e0!3m2!1sen!2stw!4v1602704010699!5m2!1sen!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        
+                        <li>
+                            Contact: 
+                            +66 2 2134567
                         </li>
+                        <li>
+                            Email: 
+                            fourStarsBangkok@4stars.org
+                        </li>
+                        <li>
+                            Address: 1031 ถนน เพลินจิต แขวง ลุมพินี เขตปทุมวัน กรุงเทพมหานคร 10330
+                        </li>
+                        <li>                    
+                            <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                                <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+                                var setting = {"height":300,"width":400,"zoom":17,"queryString":"CENTRAL EMBASSY, 1031 Phloen Chit Rd, Lumphini, Pathum Wan District, Bangkok 10330, Thailand","place_id":"ChIJz_aVZ9ue4jAR9mXCLXqZstw","satellite":false,"centerCoord":[51.3606576632166,-0.6070876386718793],"cid":"0xdcb2997a2dc265f6","lang":"en","cityUrl":"/uk/windsor-32213","cityAnchorText":"Map of Windsor, England, United Kingdom","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"286992"};
+                                var d = document;
+                                var s = d.createElement('script');
+                                s.src = 'https://1map.com/js/script-for-user.js?embed_id=286992';
+                                s.async = true;
+                                s.onload = function (e) {
+                                  window.OneMap.initMap(setting)
+                                };
+                                var to = d.getElementsByTagName('script')[0];
+                                to.parentNode.insertBefore(s, to);
+                              })();</script><a href="https://1map.com/map-embed">1 Map</a></div>                        </li>
                     </ul>               
                 </div> 
             </section>
@@ -60,11 +121,27 @@
                 <h2>Causeway Bay, Hong Kong</h2>
                 <div> 
                     <ul>
-                        <li>Address:</li>
-                        <li>Contact: </li>
-                        <li>Find on Map: <br>                         
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29536.445091817503!2d114.12802238007909!3d22.27588221150591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403ff89dfbeddb1%3A0x2e318b3c62d99338!2sVictoria%20Peak!5e0!3m2!1sen!2stw!4v1602703391306!5m2!1sen!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>               
+                        
+                        <li>
+                            Contact: +852 2408 8648
                         </li>
+                        <li>
+                            Address: 銅鑼灣勿地臣街1號時代廣場9樓922-923號舖
+                        </li>
+                        <li>                     
+                            <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                                <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+                                var setting = {"height":300,"width":400,"zoom":18,"queryString":"Times Square, Matheson Street, Causeway Bay, Hong Kong","place_id":"ChIJ_bAR11AABDQRGxsNeGwaZYM","satellite":false,"centerCoord":[51.3606576632166,-0.6070876386718793],"cid":"0x83651a6c780d1b1b","lang":"en","cityUrl":"/uk/windsor-32213","cityAnchorText":"Map of Windsor, England, United Kingdom","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"286992"};
+                                var d = document;
+                                var s = d.createElement('script');
+                                s.src = 'https://1map.com/js/script-for-user.js?embed_id=286992';
+                                s.async = true;
+                                s.onload = function (e) {
+                                  window.OneMap.initMap(setting)
+                                };
+                                var to = d.getElementsByTagName('script')[0];
+                                to.parentNode.insertBefore(s, to);
+                              })();</script><a href="https://1map.com/map-embed">1 Map</a></div>                        </li>
                     </ul>               
                 </div> 
             </section>
@@ -73,11 +150,27 @@
                 <h2>Seoul, Korea</h2>
                 <div> 
                     <ul>
-                        <li>Address:</li>
-                        <li>Contact: </li>
-                        <li>Find on Map: <br>        
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.6604808673155!2d126.97262231559264!3d37.5866118307353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2b7ef94a16b%3A0xb16d5f135eaaddc!2sBlue%20House!5e0!3m2!1sen!2stw!4v1602702743429!5m2!1sen!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        
+                        <li>
+                            Contact: +682 02 245 2343
                         </li>
+                        <li>
+                            Address: 서울, 서초구 잠원로 37-48
+                        </li>
+                        <li>        
+                            <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                                <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+                                var setting = {"height":300,"width":400,"zoom":16,"queryString":"37-48 Jamwon-ro, Banpo 3(sam)-dong, Seocho-gu, Seoul, South Korea","place_id":"ChIJIfPuGn2hfDURCg_7gnARAes","satellite":false,"centerCoord":[51.3606576632166,-0.6070876386718793],"cid":"0xeb01117082fb0f0a","lang":"en","cityUrl":"/uk/windsor-32213","cityAnchorText":"Map of Windsor, England, United Kingdom","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"286992"};
+                                var d = document;
+                                var s = d.createElement('script');
+                                s.src = 'https://1map.com/js/script-for-user.js?embed_id=286992';
+                                s.async = true;
+                                s.onload = function (e) {
+                                  window.OneMap.initMap(setting)
+                                };
+                                var to = d.getElementsByTagName('script')[0];
+                                to.parentNode.insertBefore(s, to);
+                              })();</script><a href="https://1map.com/map-embed">1 Map</a></div>                        </li>
                     </ul>               
                 </div> 
             </section>
@@ -86,11 +179,25 @@
                 <h2>Taipei, Taiwan</h2>
                 <div> 
                     <ul>
-                        <li>Address:</li>
-                        <li>Contact: </li>
-                        <li>Find on Map: <br>                         
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1832.8625671562452!2d121.51223968508258!3d25.03951294713308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90a8d497325%3A0x2876dc1b4d647f9!2sPresidential%20Office%20Building!5e0!3m2!1sen!2stw!4v1602703247283!5m2!1sen!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        
+                        <li>
+                            Contact: +886 0983 388 833
                         </li>
+                        <li>Address: 110台北市信義區松智路17號 </li>
+                        <li>                         
+                            <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                                <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+                                var setting = {"height":300,"width":400,"zoom":17,"queryString":"110, Taiwan, 台北市信義區松智路17號","place_id":"ChIJUXEeK7erQjQRBaHRUIN3ybM","satellite":false,"centerCoord":[51.3606576632166,-0.6070876386718793],"cid":"0xb3c9778350d1a105","lang":"en","cityUrl":"/uk/windsor-32213","cityAnchorText":"Map of Windsor, England, United Kingdom","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"286992"};
+                                var d = document;
+                                var s = d.createElement('script');
+                                s.src = 'https://1map.com/js/script-for-user.js?embed_id=286992';
+                                s.async = true;
+                                s.onload = function (e) {
+                                  window.OneMap.initMap(setting)
+                                };
+                                var to = d.getElementsByTagName('script')[0];
+                                to.parentNode.insertBefore(s, to);
+                              })();</script><a href="https://1map.com/map-embed">1 Map</a></div>                        </li>
                     </ul>               
                 </div> 
             </section>
