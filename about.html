@@ -5,17 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
         <style>
-
             @media screen and (max-width: 1560px) {
+                body {
+                    background-image: linear-gradient(-59deg, #6c3 10%, rgb(250,245,235) 50%);
+                }
 
                 #chefBG {
                     position: relative;
-                    height: 1000px;
+                    height: 900px;
 
                     background-image: url("./4starsStyle/about/asianChefSushi.jpg");
                     background-repeat: no-repeat;
                     background-size: cover;
+                }
 
+                .parallax {
+                    background-attachment: scroll;
                 }
 
                 #chefInfoContainer{
@@ -52,10 +57,6 @@
                 #bgContainer {
                     position: relative;
                     /*margin-top: 120px;*/
-                    height: 600px;
-                    background-color: yellow;
-
-                    display: flex;
                     justify-content: center;
                 }
 
@@ -105,16 +106,9 @@
                 }
 
                 #originsContainer {
+                    margin-top: 50px;
                     position: relative;
-                    height: 600px;
-                }
-
-                #map {
-                    height: 600px;
-                    width: 800px;
-                    background-color: red;
-
-                    margin: 0 auto;
+                    height: 500px;
                 }
 
                 /* slideshow */
@@ -122,6 +116,7 @@
                     display: flex;
                     justify-content: center;
                 }
+
                 .slide {
                     height: 400px;
                     width: 600px;
@@ -156,8 +151,19 @@
                     border-radius: 3px 0 0 3px;
                 }
 
-            }
+                /* scroll icon */
+                .scrollButton{
+                    position: relative;
+                    justify-content: center;
+                }
 
+                #arrowDown {
+                    position: relative;
+                    width: 60px;
+                    height: 60px;
+                    left: 50%;
+                }
+            }
         </style>
     </head>
 
@@ -183,25 +189,24 @@
                 </div>
             </div>
         </div>  
-        <div id = "chefBG">
+        <div class = "parallax" id = "chefBG">
             <h2>
                 Taste authentic Asia
             </h2>
-            <!--
-                            <div id = "chefInfoContainer">
+
+            <div id = "chefInfoContainer">
                 <div id="chefProfile">
                 
                 </div>
                 <div id = "chefIntro">
                     <h4>
-                        We believe that 
+                        With years of experience in culinary arts under his belt, chef Yao tirelessly practiced to preserve
+                        Taiwanese culture in his works. Born a Taiwanese national, at a young age he mastered recipe passed
+                        down for generations, and in every noodle he carefully etches the spirit of Taiwan.
                     </h4>
                 </div>
             </div>
-            -->
-
         </div>
-
         <div id = "bgContainer">
             <div id = "explanationContainer">
                 <div class="picture">
@@ -209,54 +214,62 @@
                 </div>
                 <div class = "valueExplain" id="explanation">
                     <h3>
+                        Our passion is not only to make traditional Asian food more accessible around the world but also to do it right. 
+                        We ensure that you get to rekindle your cultural pallette regardless of where you are.
+                    </h3>
+                </div>
+            </div>
+            <div id="originsContainer">
+                <h3 style="text-align: center;">
+                    We bring home to you
+                </h3>
+                <div id="slideshowContainer">
+                    <div class="slide fade active">
+                        <img src="./4starsStyle/about/taipei.jpg" style="width:100%">
+                        <div class="text">Taiwan has a long history of traditional food. We're proud to present our main Taiwanise 
+                            dish, Beef Noodz, of which recipe was passed down for generations.
+                        </div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="./4starsStyle/about/hongkong.jpg" style="width:100%">
+                        <div class="text">We bring you from HongKong </div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="./4starsStyle/about/thailand.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="./4starsStyle/about/korea.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                </div>
+            </div>
+            <div id="explanationContainer">
+                <div class="valueExplain" id="explanation2">
+                    <h3>
                         We take great care and effort in supporting the local
-                        agriculture, bringing the <em>freshest ingredients</em> 
+                        agriculture, bringing the <em>freshest ingredients</em>
                         to our kitchen, to your plate.
                     </h3>
                 </div>
-            </div>
-        </div>
-
-        <div id = "originsContainer">
-            <h3 style = "text-align: center;">
-                We bring home to you
-            </h3>
-            <div id="slideshowContainer">
-                <div class="slide fade active">
-                    <img src="./4starsStyle/about/taipei.jpg" style="width:100%">
-                    <div class="text">Taiwan has a long history of traditional food.</div>
-                </div>
-                <div class="slide fade">
-                    <img src="./4starsStyle/about/hongkong.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
-                </div>
-                <div class="slide fade">
-                    <img src="./4starsStyle/about/thailand.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-                <div class="slide fade">
-                    <img src="./4starsStyle/about/korea.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                <a class="next" onclick="changeSlide(1)">&#10095;</a>
-            </div>
-        </div>
-
-        <div id="bgContainer">
-            <div id="explanationContainer">
-                <div class = "valueExplain" id="explanation2">
-                    <h3>
-                        Our chefs dedicated their lives perfecting traditional culinary arts. 
-                        Let them convince you of their mastery.
-                    </h3>
-                </div>
                 <div class="picture">
-                
+            
                 </div>
             </div>
         </div>
+        <br/>
+        <br />
+        <a class="scrollButton" href="./locations.html"><img id = "arrowDown" alt="Arrow Down Icon"
+                src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"></a>
+        <br />
+        <br />
+        <br />
+        <br />
+                <br />
+                <br />
 
         <!-- CODE FOR FOOTER -->
         <div class="footer">
