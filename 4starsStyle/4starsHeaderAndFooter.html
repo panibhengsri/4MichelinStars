@@ -35,5 +35,19 @@
      <h2 style="color:#be3439; text-align:center; font-size: 20px; margin-top:0px;">4 STARS</h2>
    </div>
   </body>
+  
+     <!-- CODE TO FIX HEADER -->
+   <script>
+   window.onscroll = function(){myFunction()};
+   var navbar = document.getElementById("navbar");
+   var sticky = navbar.offsetTop;
+   function myFunction(){
+     if (window.pageYOffset >= sticky) {
+       navbar.classList.add("sticky");
+     }else{
+       navbar.classList.remove("sticky");
+     }
+   }
+   </script>
 
 </html>
