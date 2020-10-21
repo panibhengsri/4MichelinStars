@@ -2,6 +2,9 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
+        
+        
+
         <style type="text/css">
             h1 {
                 text-align:center;
@@ -14,12 +17,15 @@
                 }
             .locName { 
                 display: flex;
-                border: solid #be3439; 
+                border: 3px solid #be3439; 
                 text-decoration:none; 
                 color:#000000; 
                 font-weight: bold; 
-                flex-basis: 0;
+                flex-basis: 150px;
                 background: #fae7d0;
+                flex-grow:1;
+                margin:5px;
+                padding: 30px 10px;
                 }
             .locName h2 {
                 /* display:flex;  */
@@ -27,15 +33,59 @@
                 }
             .locName ul li {
                 display:flex; 
-                /* align-items: stretch;  */
+                align-items: stretch; 
                 flex-wrap: wrap;
                 padding:5px 2px 5px 5px 
                 }
-            .locName ul{
+
+            .locName ul
+            {
                 list-style-type: none;
-                }
+            }
             
+            .resImage
+            {
+                max-width: 500px;
+                max-height: 300px;
+            }
+
+            .large
+            {
+                opacity: 0;
+                transition: opacity 0.5s ease-out;  
+                position: absolute;
+                left: -9999px;
+            }
+            li:hover .large 
+            {
+                margin-top: -250px;
+                margin-left: -250px;
+                position: absolute;
+                /* position:relative; */
+                left: 50%;
+                right: 50%;
+                opacity:1;
+
+            }
+            
+            li:hover .locName
+            {
+                filter: blur(0px);
+                transform: scale(1);
+                opacity:0.5;
+            }
+            .large-image
+            {
+                margin-top: 100%;
+                margin-left:-28%;
+                align-items: center;
+                max-width:600px;
+                border: 15px solid #be3439;
+            }
+
         </style>
+
+      
 
     </head>
   
@@ -80,14 +130,19 @@
 
         <!-- CODE FOR LOCATIONS -->
         <h1>MEET US WORLDWIDE</h1>
+
         <article> 
-            
-            
             <section class="locName">
-                <h2>Bangkok, Thailand</h2> <br>
+                
+                
                 <div> 
                     <ul>
-                        
+                        <li>
+                            <h2>Bangkok, Thailand</h2> 
+                            <span class="large">
+                                <img src="4starsStyle/location/bangkok.jpg" class="large-image" >
+                            </span>
+                        </li>
                         <li>
                             Contact: 
                             +66 2 2134567
@@ -107,10 +162,15 @@
             </section>
 
             <section class="locName">
-                <h2>Causeway Bay, Hong Kong</h2>
+                
                 <div> 
                     <ul>
-                        
+                        <li>
+                            <h2>Causeway Bay, Hong Kong</h2>
+                            <span class="large">
+                                <img src="4starsStyle/location/hk.jpg" class="large-image" >
+                            </span>
+                        </li>
                         <li>
                             Contact: +852 2408 8648
                         </li>
@@ -129,10 +189,15 @@
             </section>
             
             <section class="locName">
-                <h2>Seoul, Korea</h2>
+                
                 <div> 
                     <ul>
-                        
+                        <li>
+                            <h2>Seoul, Korea</h2>
+                            <span class="large">
+                                <img src="4starsStyle/location/seoul.jpeg" class="large-image" >
+                            </span>
+                        </li>
                         <li>
                             Contact: +682 02 245 2343
                         </li>
@@ -151,10 +216,15 @@
             </section>
 
             <section class="locName">
-                <h2>Taipei, Taiwan</h2>
+                
                 <div> 
                     <ul>
-                        
+                        <li>
+                            <h2>Taipei, Taiwan</h2>
+                            <span class="large">
+                                <img src="4starsStyle/location/taipei.jpg" class="large-image" >
+                            </span>
+                        </li>
                         <li>
                             Contact: +886 0983 388 833
                         </li>
@@ -165,6 +235,33 @@
                         <li>Address: 110台北市信義區松智路17號 </li>
                         <li>                         
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9926991006964!2d121.56376681529906!3d25.034321833295767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb0d1461595%3A0xe7eb002eccdecb1d!2sBreeze%20atr%C3%A9!5e0!3m2!1sen!2stw!4v1602787064504!5m2!1sen!2stw" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </li>
+                    </ul>               
+                </div> 
+            </section>
+            <section class="locName">
+                
+                <div> 
+                    <ul>
+                        <li>
+                            <h2>Medford, MA, USA</h2>
+                            <span class="large">
+                                <img src="4starsStyle/location/medford.jpg" class="large-image" >
+                            </span>
+                        </li>
+                        <li>
+                            Contact: +1 617 627 3300
+                        </li>
+                        <li>
+                            Email: 
+                            fourStarsMedford@4stars.com
+                        </li>
+                        <li>
+                            Address: 55 Professors Row
+                            Medford, MA 02155 
+                        </li>
+                        <li>                         
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2945.9889479760077!2d-71.11929138189475!3d42.40668036141241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e376ddf483f4e3%3A0x5d31d457afb1fae6!2sPresident&#39;s%20Lawn%2C%2055%20Professors%20Row%2C%20Medford%2C%20MA%2002155%2C%20USA!5e0!3m2!1sen!2stw!4v1602793035690!5m2!1sen!2stw" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </li>
                     </ul>               
                 </div> 
