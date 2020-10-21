@@ -1,18 +1,39 @@
-.navbar {
-  background-color: #faf5ec;
-  padding: 20px;
+.header {
+  z-index: 5;
+  position: relative;
+  padding-left: 30px;
 }
-.navbar a {
+.header .logo {
   float: left;
   text-align: center;
-  color: #eebe2f;
   padding-top: 20px;
   padding-bottom: 20px;
   width: 200px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+#logoImg {
+  height:25px; 
+  float:left;
+}
+
+.header .hlpage {
+  float: right;
+  text-align: center;
+  color: #eebe2f;
+  width: 150px;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
 }
+
+.navbar {
+  position: relative;
+  float: right;
+  right: 30px;
+}
+
 .sticky{
   position:fixed;
   top:0;
@@ -28,10 +49,117 @@
   float:right;
 }
 body {
-  background-color: #faf5ec;
+  background: #faf5ec;
   font-size: 20px;
-  height: 100%;
+  height: 100%; 
+  margin: 0; 
+  
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
+
+.stars{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.star{
+    position: fixed;
+    display: block;
+    list-style: none;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    z-index:-5;
+}
+
+.stars img:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.stars img:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.stars img:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.stars img:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.stars img:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.stars img:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.stars img:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.stars img:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.stars img:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.stars img:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+    }
+}
+
 h1 {
   color: #be3439;
   font-family: sans-serif;
@@ -47,59 +175,68 @@ p {
   font-family: "Times New Roman", times, serif;
   font-size: 20px;
 }
-ul {
-  color: #be3439;
-  font-family: sans-serif;
-  font-size: 20px;
+section{
+  padding-bottom: 100px;
 }
-
 .dropbtn {
-  background-color: #faf5ec;
+  outline:none;
+  background-color: Transparent;
+  cursor: pointer;
   color: #eebe2f;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 200px;
+  width: 150px;
   font-size: 20px;
   font-family: "Times New Roman", times, serif;
   font-weight: bold;
   text-decoration: none;
   border: none;
-}
+} .menubtn { cursor: pointer;}
 .dropdown {
   position: relative;
   display: inline-block;
 }
 .dropdown-content {
-  display: none;
+  transition: opacity 0.5s;
+  opacity: 0%;
   position: absolute;
   background-color: #faf5ec;
   width: 150px;
   z-index: 1;
 }
-.dropdown-content a {
-  color: #eebe2f;
+.dropdown-content .hlpage {
+  /* color: #eebe2f; */
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 200px;
+  width: 150px;
   text-decoration: none;
   font-family: "Times New Roman", times, serif;
   font-weight: bold;
   display: block;
 }
-.navbar a:hover, .dropbtn:hover{
-  background-color: #f6eedf;
+.header .hlpage:hover{
+  background-color: #be3439;
 }
-.dropdown:hover .dropdown-content {display:block;}
+.dropdown:hover .dropdown-content {
+  display:block;
+  opacity: 100%;
+  transition: opacity 0.4s;
+}
 .dropbtn:focus{outline:none;}
 
 .footer{
+  /* uncomment for sticky footer
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   padding: 5px;
+  */
+  min-height:80px; 
   background-color: #eebe2f;
+  bottom: 0;
   color: #be3439;
+  z-index: 5;
 }
 .img-container {
   text-align: center;

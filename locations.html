@@ -1,42 +1,80 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="4starsStyle.css">
+        <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
         <style type="text/css">
-            h1 {font-size:60; text-align:center}
-            article {display: flex; flex-wrap: wrap;justify-content: center;}
-            .locName { border: solid #be3439; text-decoration:none; color:#000000; font-weight: bold; background: #eff3f8;}
-            .locName h2 {display:block; padding-left:5px }
-            .locName ul li {display:flex; align-items: stretch; padding:5px 2px 5px 5px }
-            .locName ul{list-style-type: none;}
+            h1 {
+                text-align:center;
+                color:#eebe2f;
+                }
+            article {
+                display: flex; 
+                flex-wrap: wrap;
+                justify-content: center;
+                }
+            .locName { 
+                display: flex;
+                border: solid #be3439; 
+                text-decoration:none; 
+                color:#000000; 
+                font-weight: bold; 
+                flex-basis: 0;
+                background: #fae7d0;
+                }
+            .locName h2 {
+                /* display:flex;  */
+                padding-left:5px 
+                }
+            .locName ul li {
+                display:flex; 
+                /* align-items: stretch;  */
+                flex-wrap: wrap;
+                padding:5px 2px 5px 5px 
+                }
+            .locName ul{
+                list-style-type: none;
+                }
             
         </style>
 
     </head>
   
     <body>
+        <div class="stars">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star1.png">
+            <img class="star" src="./4starsStyle/star2.png">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star3.png">
+            <img class="star" src="./4starsStyle/star1.png">
+            <img class="star" src="./4starsStyle/star2.png">
+        </div>
         <!-- CODE FOR HEADER -->
-        <div class="navbar">
-            <img src="4starsStyle/4starsLogo.png" style="height:25px; float:left; margin: 15px;" alt="logo">
-            <a href="index.html">home</a>
-            <div class="dropdown">
-            <button class="dropbtn">about us</button>
-                <div class="dropdown-content">
-                <a href="about.html">our story</a>
-                <a href="#">locations</a>
-                <a href="review.html">reviews</a>
+        <div class="header">
+            <div>
+                <a class="logo" href="./index.html"><img src="./4starsStyle/4starsLogo.png" id="logoImg" alt="logo"></a>
+            </div>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button onclick="location.href='./menu.html'" type="button" class="dropbtn menubtn">Menu</button>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">About Us</button>
+                    <div class="dropdown-content">
+                        <a class="hlpage" href="./about.html">Our Story</a>
+                        <a class="hlpage" href="./locations.html">Locations</a>
+                        <a class="hlpage" href="./review.html">Reviews</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Get in Touch</button>
+                    <div class="dropdown-content">
+                        <a class="hlpage" href="./contact.html">Contact Us</a>
+                        <a class="hlpage" href="./reserve.html">Reservations</a>
+                    </div>
                 </div>
             </div>
-
-            <a href="menu.html">menu</a>
-            <div class="dropdown">
-                <button class="dropbtn">get in touch</button>
-                <div class="dropdown-content">
-                    <a href="contact.html">contact</a>
-                    <a href="reserve.html">reservations</a>
-                </div>
-            </div>
-
         </div>
         <!-- END OF HEADER -->
 
@@ -49,23 +87,42 @@
                 <h2>Bangkok, Thailand</h2> <br>
                 <div> 
                     <ul>
-                        <li>Address: </li>
-                        <li>Contact: </li>
-                        <li>Find on Map:                      
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.479244635132!2d100.4891229148305!3d13.74994809034869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2990f1400adc9%3A0xc7c8e2e28e73a435!2sThe%20Grand%20Palace!5e0!3m2!1sen!2stw!4v1602704010699!5m2!1sen!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        
+                        <li>
+                            Contact: 
+                            +66 2 2134567
+                        </li>
+                        <li>
+                            Email: 
+                            fourStarsBangkok@4stars.com
+                        </li>
+                        <li>
+                            Address: 1031 ถนน เพลินจิต แขวง ลุมพินี เขตปทุมวัน กรุงเทพมหานคร 10330
+                        </li>
+                        <li>                    
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.581750529449!2d100.54440161527863!3d13.743753501181708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29edb6795f6cf%3A0xdcb2997a2dc265f6!2sCENTRAL%20EMBASSY!5e0!3m2!1sen!2stw!4v1602786946726!5m2!1sen!2stw" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </li>
                     </ul>               
                 </div> 
             </section>
 
             <section class="locName">
-                <h2>The Peak, Hong Kong</h2>
+                <h2>Causeway Bay, Hong Kong</h2>
                 <div> 
                     <ul>
-                        <li>Address:</li>
-                        <li>Contact: </li>
-                        <li>Find on Map: <br>                         
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29536.445091817503!2d114.12802238007909!3d22.27588221150591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403ff89dfbeddb1%3A0x2e318b3c62d99338!2sVictoria%20Peak!5e0!3m2!1sen!2stw!4v1602703391306!5m2!1sen!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>               
+                        
+                        <li>
+                            Contact: +852 2408 8648
+                        </li>
+                        <li>
+                            Email: 
+                            fourStarsCauseway@4stars.com
+                        </li>
+                        <li>
+                            Address: 銅鑼灣勿地臣街1號時代廣場9樓922-923號舖
+                        </li>
+                        <li>                     
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.9956148848337!2d114.17992491535003!3d22.278155949327253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040050d711b0fd%3A0x83651a6c780d1b1b!2sTimes%20Square!5e0!3m2!1sen!2stw!4v1602786992630!5m2!1sen!2stw" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </li>
                     </ul>               
                 </div> 
@@ -75,10 +132,19 @@
                 <h2>Seoul, Korea</h2>
                 <div> 
                     <ul>
-                        <li>Address:</li>
-                        <li>Contact: </li>
-                        <li>Find on Map: <br>        
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.6604808673155!2d126.97262231559264!3d37.5866118307353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2b7ef94a16b%3A0xb16d5f135eaaddc!2sBlue%20House!5e0!3m2!1sen!2stw!4v1602702743429!5m2!1sen!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        
+                        <li>
+                            Contact: +682 02 245 2343
+                        </li>
+                        <li>
+                            Email: 
+                            fourStarsSeoul@4stars.com
+                        </li>
+                        <li>
+                            Address: 서울, 서초구 잠원로 37-48
+                        </li>
+                        <li>        
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.9841391068294!2d127.00373431559109!3d37.50829223521876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca17d1aeef321%3A0xeb01117082fb0f0a!2s37-48%20Jamwon-ro%2C%20Banpo%203(sam)-dong%2C%20Seocho-gu%2C%20Seoul%2C%20South%20Korea!5e0!3m2!1sen!2stw!4v1602787020998!5m2!1sen!2stw" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </li>
                     </ul>               
                 </div> 
@@ -88,10 +154,17 @@
                 <h2>Taipei, Taiwan</h2>
                 <div> 
                     <ul>
-                        <li>Address:</li>
-                        <li>Contact: </li>
-                        <li>Find on Map: <br>                         
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1832.8625671562452!2d121.51223968508258!3d25.03951294713308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90a8d497325%3A0x2876dc1b4d647f9!2sPresidential%20Office%20Building!5e0!3m2!1sen!2stw!4v1602703247283!5m2!1sen!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        
+                        <li>
+                            Contact: +886 0983 388 833
+                        </li>
+                        <li>
+                            Email: 
+                            fourStarsTaipei@4stars.com
+                        </li>
+                        <li>Address: 110台北市信義區松智路17號 </li>
+                        <li>                         
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9926991006964!2d121.56376681529906!3d25.034321833295767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb0d1461595%3A0xe7eb002eccdecb1d!2sBreeze%20atr%C3%A9!5e0!3m2!1sen!2stw!4v1602787064504!5m2!1sen!2stw" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </li>
                     </ul>               
                 </div> 
@@ -107,8 +180,8 @@
         <!-- CODE FOR FOOTER -->
         <div class="footer">
             <div class="img-container">
-                <img src="4starsStyle/4starsLogoRed.png" style="height: 20px; margin-top: 15px;" alt="logo, red">
-            </div>
+             <img src="./4starsStyle/4starsLogoRed.png" style="height: 20px; margin-top: 15px;" alt="logo, red">
+           </div>
             <h2 style="color:#be3439; text-align:center; font-size: 20px; margin-top:0px;">4 STARS</h2>
         </div>
         <!-- END OF FOOTER -->
