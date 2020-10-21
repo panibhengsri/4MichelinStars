@@ -11,6 +11,46 @@
             box-sizing: border-box;
         }
 
+        input[type=tel], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=number], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=date], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=time], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
         input[type=submit] {
             width: 100%;
             background-color:#be3439;
@@ -26,11 +66,12 @@
             background-color:#9b484b;
         }
 
-        div {
+        section {
             border-radius: 5px;
             background-color: #f2f2f2;
             padding: 20px;
         }
+
     </style>
   <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -115,11 +156,12 @@
                 <input type="time" id="time" name="time" min="11:00" max ="22:00" required><br><br>
 
                 <label for="branch">Branch:</label><br>
-                <select id="branch" name="branch" required></select>
+                <select id="branch" name="branch" required>
                     <option value = "th">Bangkok, Thailand</option>
                     <option value ="hk">Causeway Bay, Hong Kong</option>
                     <option value ="kr">Seoul, Korea</option>
                     <option value = "tw">Taipei, Taiwan</option>
+                </select>
 
                 <label for="request">Special Request:</label><br>
                 <input type="text" id="request" name="request"><br><br>
