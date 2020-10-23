@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html>
-
+<!--https://medium.com/developedbyjohn/equal-width-flex-items-a5ba1bfacb77-->
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
         <style>
-            @media screen and (max-width: 1560px) {
+            /* 100 vw for width */
+            @media screen and (max-width: 1700px) {
 
-                #pageSubHeader {
-                    height: 800px;
-                }
-
-                #logoRed {
-                    height: 100px;
-                    width: 420px;
-                    margin: 0 auto;
-
-                    background-image: url("./4starsStyle/4starsLogoRed.png");
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    
+                #container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                 }
 
                 #contactContainer {
-                    height: 100px;
                     text-align: center;
 
                     display:flex;
                     justify-content: space-between;
+                    flex-direction: row;
                 }
 
                 #contactBox {
@@ -56,21 +48,46 @@
                     resize: none;
                 }
 
-                /* scroll icon */
-                .scrollButton{
-                    position: relative;
+            }
+
+            /* phone screen */ 
+            @media screen and (max-width: 768px) {
+                
+                #container {
+                    display: flex;
                     justify-content: center;
+                    flex-direction: column;
                 }
 
-                #arrowDown {
-                    position: absolute;
-                    top: 30px;
-                    width: 60px;
-                    height: 60px;
-                    left: 50%;
+                #contactContainer {
+                    height: 100%;
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-bottom: 20px;
                 }
+
+
+                #picture {
+                    display: none;
+                }
+
+                .inputIdentity {
+                    width: 400px;
+                }
+
+                .inputMessage {
+                    width: 400px;
+                    resize: none;
+                }
+
             }
         </style>
+        <script>
+            function popUp() {
+                alert("Your message has been sent! Please allow 3-5 business days for a reply");
+            }
+        </script>
     </head>
 
     <body>
@@ -110,28 +127,25 @@
                 </div>
             </div>
         </div>
-        <div id="pageSubHeader">
-            <div id="logoRed">
-        
-            </div>
-            <h3 style="text-align: center;">
-                Contact Us
-            </h3>
-            <div id="contactContainer">
-                <div id="contactBox">
-                    <form>
+        <div id="container"> <!-- flex column-->
+            <h1 style="text-align: center;">
+                ✯Contact Us✯
+            </h1>
+            <div id="contactContainer"> <!-- flex column - phone flex row - laptop-->
+                <div id="contactBox"> 
+                    <form onsubmit = "popUp(); return false">
                         <div>
-                            <input class="inputIdentity" type="text" id="name" name="name" placeholder="NAME">
+                            <input class="inputIdentity" type="text" id="name" name="name" placeholder="NAME" required>
                         </div>
                         <div>
-                            <input class="inputIdentity" type="text" id="email" name="email" placeholder="EMAIL">
+                            <input class="inputIdentity" type="text" id="email" name="email" placeholder="EMAIL" required>
                         </div>
                         <div>
                             <input class="inputIdentity" type="text" id="resID" name="resID"
                                 placeholder="Reservation ID if applicable">
                         </div>
                         <div>
-                            <textarea class="inputMessage" placeholder="Write message here"></textarea>
+                            <textarea class="inputMessage" placeholder="Write message here" required></textarea>
                         </div>
                         <div>
                             <input type="submit" value="SEND">
@@ -140,7 +154,7 @@
                     </form>
                 </div>
                 <div id="picture">
-            
+                
                 </div>
             </div>
         </div>
