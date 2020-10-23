@@ -48,6 +48,8 @@
 .right{
   float:right;
 }
+
+/* inspired by https://freefrontend.com/css-animated-backgrounds/*/
 body {
   background: #faf5ec;
   font-size: 20px;
