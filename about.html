@@ -89,6 +89,7 @@
             @media screen and (max-width: 768px) {
 
                 #container {
+                    height: 100%;
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
@@ -103,20 +104,34 @@
                 .valueExplain {
                     position: relative;
                     text-align: center;
-                    font-size: 16px;
+                    font-size: 20px;
                     margin: 10px;
+                    border: #be3439;
+                    border-style:groove;
                 }
 
                 .picture {
+                    max-width: 100%;
+                    height: auto;
                     margin: 0 auto;
-                    background-color: red;
-                    width: 80%;
-                    height: 200px;
+                }
+
+                #picture1 {
+                    background-image: url("./4starsStyle/about/insideKitchen.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #explanationContainer {
+                    display:flex;
+                    justify-content: center;
+                    flex-direction: column;
                 }
 
                 /* slideshow */
                 #slideshowContainer {
                     width: 100%;
+                    height: 100%;
                     display: flex;
                     justify-content: center;
                     flex-direction: row;
@@ -130,14 +145,18 @@
                     display: none;
                 }
 
-                .active {
+                .text {
+                    font-size: 20px;
+                }
+
+                .initialActive {
                     display: block;
                 }
 
-                /* Next & previous buttons */
                 .prev, .next {
                     position: relative;
                     height: 50px;
+                    top: 30%;
                     cursor: pointer;
                     width: auto;
                     color: black;
@@ -151,13 +170,10 @@
 
                 .prev {
                     left: -2%;
-                    top: 50%;
                 }
 
-                /* Position the "next button" to the right */
                 .next {
                     right: -2%;
-                    top: 50%;
                 }
             }
             
@@ -202,13 +218,10 @@
             </div>
         </div>
         <div id = "container"> <!-- column flex -->
-            <h1 id = "message" >TASTE ASIA IN ITS AUTHENTICITY </h1>
-            <h3 style="text-align: center;">
-                We bring home to you
-            </h3>
+            <h1 style = "text-align: center;">✯Our Story✯ </h1>
             <div id="slideshowContainer"> <!-- row flex -->
                 <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                <div class="slide fade active"> <!-- column flex-->
+                <div class="slide fade initialActive"> <!-- column flex-->
                     <img src="./4starsStyle/about/taipei.jpg" style="width:100%">
                     <div class="text">Taiwan has a long history of traditional food. We're proud to present our main
                         Taiwanise
@@ -231,24 +244,24 @@
                 <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
             <div id = "explanationContainer">
-                <h3 class="valueExplain" id="explanation2">
-                    We take great care and effort in supporting the local
-                    agriculture, bringing the <em>freshest ingredients</em>
-                    to our kitchen, to your plate.
-                </h3>
-                <div class="picture">
-                
+                <div class="valueExplain">
+                    <h3 id="explanation2">
+                        We take great care and effort in supporting the local
+                        agriculture, bringing the <em>freshest ingredients</em>
+                        to our kitchen, to your plate.
+                    </h3>
                 </div>
+                <img class="picture" src="./4starsStyle/about/farm.jpg">
             </div>
             <div id = "explanationContainer">
-                <h3 class="valueExplain" id="ex>planation">
-                    Our passion is not only to make traditional Asian food more accessible around the world but also to do
-                    it right.
-                    We ensure that you get to rekindle your cultural pallette regardless of where you are.
-                </h3>
-                <div class="picture">
-                
+                <div class="valueExplain">
+                    <h3 id="ex>planation">
+                        Our passion is not only to make traditional Asian food more accessible around the world but also to do
+                        it right.
+                        We ensure that you get to rekindle your cultural pallette regardless of where you are.
+                    </h3>
                 </div>
+                <img class="picture" src="./4starsStyle/about/insideKitchen.jpg">
             </div>
         </div>
         <br />
@@ -280,7 +293,7 @@
                     showSlide(3);
                 }
                 else if (currentSlide == 3) {
-                    showSlide(1);
+                    showSlide(0);
                 }
 
             }
