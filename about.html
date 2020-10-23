@@ -229,6 +229,7 @@
             <h2 style = "text-align: center;">
                 Who We Represent
             </h2>
+            <!-- Inspiration: https://www.w3schools.com/howto/howto_js_slideshow.asp-->
             <div id="slideshowContainer"> <!-- row flex -->
                 <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
                 <div class="slide fade initialActive"> <!-- column flex-->
@@ -323,15 +324,10 @@
 
         function showSlide(index) {
             var slides = $(".slide");
-            for ( var i = 0; i < slides.length; i++ ) {
-                $(slides[i]).css("display", "none");
-            }
-            currentSlide = index;
-            console.log("currentSlide: ", currentSlide)
-            $(slides[index]).css("display", "block");
-            // var slidesElements = $(".slide");
-            // console.log(slidesElements);
-
+            $(slides[currentSlide]).fadeOut(200, function() {
+                currentSlide = index;
+                $(slides[index]).fadeIn(200);
+            });
         }
 
 
