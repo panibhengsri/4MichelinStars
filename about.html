@@ -8,8 +8,9 @@
         <style>
             @media screen and (max-width: 1700px) {
                 #container {
+                    height: 100%;
                     display: flex;
-                    justify-content: center; 
+                    justify-content: center;
                     flex-direction: column;
                 }
 
@@ -19,50 +20,58 @@
                 }
                 
                 /* paragraph of restaurant values */
-
-                #explanationContainer {
-                    display: flex;
-                    justify-content: center; 
-                    flex-direction: row;
-
-                    margin-top: 10px;
-                    margin-bottom: 10px;
-                }
-
                 .valueExplain {
                     position: relative;
                     text-align: center;
-                    font-size: 16px;
+                    font-size: 20px;
                     margin: 10px;
+                    border: #be3439;
+                    border-style:groove;
                 }
 
                 .picture {
+                    max-width: 40%;
+                    height: auto;
                     margin: 0 auto;
-                    background-color: red;
-                    width: 80%;
-                    height: 200px;
+                }
+
+                #explanationContainer {
+                    display:flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    margin: 20px;
                 }
 
                 /* slideshow */
                 #slideshowContainer {
-                    width: 100%;
-                    display: flex;
+                    margin: 0 auto;
                     justify-content: center;
+                    width: 70%;
+                    height: 70%;
+                    display: flex;
                     flex-direction: row;
                     font-size: 14px;
                     margin-bottom: 20px;
                 }
 
                 .slide {
-                    height: 50%;
+                    height: 60%;
                     width: 70%;
                     display: none;
                 }
 
-                /* Next & previous buttons */
+                .text {
+                    font-size: 29px;
+                }
+
+                .initialActive {
+                    display: block;
+                }
+
                 .prev, .next {
                     position: relative;
                     height: 50px;
+                    top: 30%;
                     cursor: pointer;
                     width: auto;
                     color: black;
@@ -76,14 +85,12 @@
 
                 .prev {
                     left: -2%;
-                    top: 50%;
                 }
 
-                /* Position the "next button" to the right */
                 .next {
                     right: -2%;
-                    top: 50%;
                 }
+
             }
             /* phone screen */ 
             @media screen and (max-width: 768px) {
@@ -219,26 +226,27 @@
         </div>
         <div id = "container"> <!-- column flex -->
             <h1 style = "text-align: center;">✯Our Story✯ </h1>
+            <h2 style = "text-align: center;">
+                Who We Represent
+            </h2>
             <div id="slideshowContainer"> <!-- row flex -->
                 <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
                 <div class="slide fade initialActive"> <!-- column flex-->
                     <img src="./4starsStyle/about/taipei.jpg" style="width:100%">
-                    <div class="text">Taiwan has a long history of traditional food. We're proud to present our main
-                        Taiwanise
-                        dish, Beef Noodz, of which recipe was passed down for generations.
+                    <div class="text">Taiwan has a long history of traditional food. Please enjoy our pieces of culinary arts of which recipes were passed down for generations.
                     </div>
                 </div>
                 <div class="slide fade">
                     <img src="./4starsStyle/about/hongkong.jpg" style="width:100%">
-                    <div class="text">We bring you from HongKong </div>
+                    <div class="text">From the ports of Hongkong, we bring you exciting cuisines that take you on a journey through the cultural fusion of the East and West.</div>
                 </div>
                 <div class="slide fade">
                     <img src="./4starsStyle/about/thailand.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
+                    <div class="text">Welcome to Thailand. Exquisite dishes as beautiful as their country await you.</div>
                 </div>
                 <div class="slide fade">
                     <img src="./4starsStyle/about/korea.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
+                    <div class="text"> Take a delicious bite out of Korea and feel the warmth of their culture. </div>
                 </div>
                 <!-- Next and previous buttons -->
                 <a class="next" onclick="changeSlide(1)">&#10095;</a>
