@@ -4,6 +4,7 @@
     <script>
         function popUp() {
             alert("Your message has been sent! Please allow 3-5 business days for a reply");
+            document.getElementById("myForm").reset();
         }
     </script>
 
@@ -172,36 +173,22 @@
             </div>
 
             <div class = "box">
-                    <form onsubmit = "popUp(); return false">
+                    <form id = "myForm" onsubmit = "popUp(); return false">
                         <p>First name: <input type="text" id="fname" name="fname" required><br><br></p>
                         <p>Last name: <input type="text" id="lname" name="lname" required><br><br></p>
                         <p>Email: <input type="text" id="email" name="email"><br><br></p>
                         <p>Phone: <input type="tel" id="phone" name="phone" placeholder= "123-456-7890" pattern ="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br></p>
-                        
-        
-                        <label for="adults">Number of Adults:</label><br>
-                        <input type="number" id="adults" name="adults" min="1" max="10" required><br><br>
-        
-                        <label for="children">Number of Children:</label><br>
-                        <input type="number" id="children" name="children" min="1" max="10" required><br><br>
-        
-                        <label for="date">Date of Reservation:</label><br>
-                        <input type="date" id="date" name="date" required><br><br>
-        
-                        <label for="time">Time of Reservation:</label><br>
-                        <input type="time" id="time" name="time" min="11:00" max ="22:00" required><br><br>
-        
-                        <label for="branch">Branch:</label><br>
-                        <select id="branch" name="branch" required>
-                            <option value = "th">Bangkok, Thailand</option>
-                            <option value ="hk">Causeway Bay, Hong Kong</option>
-                            <option value ="kr">Seoul, Korea</option>
-                            <option value = "tw">Taipei, Taiwan</option>
-                        </select><br><br>
-        
-                        <label for="request">Special Request:</label><br>
-                        <input type="text" id="request" name="request"><br><br>
-                        
+                        <p>Number of Adults: <input type="number" id="adults" name="adults" min="1" max="10" required><br><br></p>
+                        <p>Number of Children: <input type="number" id="children" name="children" min="1" max="10" required><br><br></p>
+                        <p>Date of Reservation: <input type="date" id="date" name="date" required><br><br></p>
+                        <p>Time of Reservation: <input type="time" id="time" name="time" min="11:00" max ="22:00" required><br><br></p>
+                        <p>Branch: <select id="branch" name="branch" required>
+                                <option value = "th">Bangkok, Thailand</option>
+                                <option value ="hk">Causeway Bay, Hong Kong</option>
+                                <option value ="kr">Seoul, Korea</option>
+                                <option value = "tw">Taipei, Taiwan</option>
+                            </select><br><br></p>
+                        <p>Special Request: <input type="text" id="request" name="request"><br><br></p>
                         <input type="submit" value="Submit">
                     </form>
             </div>
