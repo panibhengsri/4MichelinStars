@@ -9,6 +9,11 @@
     </script>
 
     <style>
+
+        .col {
+            column-count: 3;
+        }
+
         label {
             color: #be3439;
             font-family: "Times New Roman", times, serif;
@@ -174,6 +179,7 @@
 
             <div class = "box">
                     <form id = "myForm" onsubmit = "popUp(); return false">
+                        <div class = "col">
                         <p>First name: <input type="text" id="fname" name="fname" required /><br><br></p>
                         <p>Last name: <input type="text" id="lname" name="lname" required /><br><br></p>
                         <p>Email: <input type="text" id="email" name="email" /><br><br></p>
@@ -189,6 +195,7 @@
                                 <option value = "tw">Taipei, Taiwan</option>
                             </select><br><br></p>
                         <p>Special Request: <input type="text" id="request" name="request" /><br><br></p>
+                        </div>
                         <input type="submit" value="Submit">
                     </form>
             </div>
