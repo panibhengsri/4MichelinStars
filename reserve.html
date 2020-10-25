@@ -135,51 +135,55 @@
 
     <article>
         <section>
-            <h3>
-                Due to popularity and limited space in the restaurants, it is 
+            <h1>✯Reservation✯</h1>
+            <div class = "box">
+                <p>Due to popularity and limited space in the restaurants, it is 
                 highly recommended that reservations are made before. Please 
                 fill out the form below and we will contact you to confirm your 
-                reservation.
-            </h3>
+                reservation.</p>
+            </div>
 
-            <form action="/action_page.php">
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname" required><br><br>
+            <div class = "box">
+                    <form action="/action_page.php">
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" required><br><br>
+        
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" required><br><br>
+        
+                        <label for="email">Email:</label><br>
+                        <input type="text" id="email" name="email"><br><br>
+        
+                        <label for="phone">Phone:</label><br>
+                        <input type="tel" id="phone" name="phone" placeholder= "123-456-7890" pattern ="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+        
+                        <label for="adults">Number of Adults:</label><br>
+                        <input type="number" id="adults" name="adults" min="1" max="10" required><br><br>
+        
+                        <label for="children">Number of Children:</label><br>
+                        <input type="number" id="children" name="children" min="1" max="10" required><br><br>
+        
+                        <label for="date">Date of Reservation:</label><br>
+                        <input type="date" id="date" name="date" required><br><br>
+        
+                        <label for="time">Time of Reservation:</label><br>
+                        <input type="time" id="time" name="time" min="11:00" max ="22:00" required><br><br>
+        
+                        <label for="branch">Branch:</label><br>
+                        <select id="branch" name="branch" required>
+                            <option value = "th">Bangkok, Thailand</option>
+                            <option value ="hk">Causeway Bay, Hong Kong</option>
+                            <option value ="kr">Seoul, Korea</option>
+                            <option value = "tw">Taipei, Taiwan</option>
+                        </select><br>
+        
+                        <label for="request">Special Request:</label><br>
+                        <input type="text" id="request" name="request"><br><br>
+                        
+                        <input type="submit" value="Submit">
+                    </form>
+            </div>
 
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname" required><br><br>
-
-                <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email"><br><br>
-
-                <label for="phone">Phone:</label><br>
-                <input type="tel" id="phone" name="phone" pattern ="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
-
-                <label for="adults">Number of Adults:</label><br>
-                <input type="number" id="adults" name="adults" min="1" max="10" required><br><br>
-
-                <label for="children">Number of Children:</label><br>
-                <input type="number" id="children" name="children" min="1" max="10" required><br><br>
-
-                <label for="date">Date of Reservation:</label><br>
-                <input type="date" id="date" name="date" required><br><br>
-
-                <label for="time">Time of Reservation:</label><br>
-                <input type="time" id="time" name="time" min="11:00" max ="22:00" required><br><br>
-
-                <label for="branch">Branch:</label><br>
-                <select id="branch" name="branch" required>
-                    <option value = "th">Bangkok, Thailand</option>
-                    <option value ="hk">Causeway Bay, Hong Kong</option>
-                    <option value ="kr">Seoul, Korea</option>
-                    <option value = "tw">Taipei, Taiwan</option>
-                </select><br>
-
-                <label for="request">Special Request:</label><br>
-                <input type="text" id="request" name="request"><br><br>
-                
-                <input type="submit" value="Submit">
-            </form>
         </section>
     </article>
 
