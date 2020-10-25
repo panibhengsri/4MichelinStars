@@ -48,6 +48,9 @@
 .right{
   float:right;
 }
+
+/* BACKGROUND START */
+/* inspired by https://freefrontend.com/css-animated-backgrounds/*/
 body {
   background: #faf5ec;
   font-size: 20px;
@@ -160,6 +163,25 @@ body {
     }
 }
 
+/* BACKGROUND END */
+
+/* BUTTON STYLE START */
+input[type=submit] {
+    width: 100%;
+    background-color:#be3439;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color:#9b484b;
+}
+
+/* BUTTON STYLE END */
 h1 {
   color: #be3439;
   font-family: sans-serif;

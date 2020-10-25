@@ -3,6 +3,12 @@
 
     <style>
 
+        article {
+            display: flex; 
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         section {
             border-radius: 5px;
             padding: 20px;
@@ -10,11 +16,38 @@
 
         h1 {
             text-size-adjust: 80%;
+            text-align: center;
         }
 
         h3 {
             text-size-adjust: 80%;
+            text-align: center;
         }
+
+    .box {
+        display: flex;
+        border: 30px  double #fae7d0; 
+        text-decoration:none; 
+        color:#000000; 
+        font-weight: bold; 
+        flex-basis: 150px;
+        flex-grow:1;
+        margin:5px;
+        padding: 30px 10px;
+    }
+
+    .box h2 {
+        padding-left:0px 
+                
+    }
+    
+    .box ul li {
+        display:flex; 
+        align-items: stretch; 
+        flex-wrap: wrap;
+        padding:5px 2px 5px 5px; 
+        color: #be3439;
+    }
 
     </style>
 
@@ -24,26 +57,6 @@
     <meta charset="utf-8">
     <title>Menu</title>
   </head>
-
-  <style>
-
-    .item {
-        width: 100%; 
-    }
-
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .container>div {
-        flex: 0 50%;
-        box-sizing:border-box;
-    }
-
-  </style>
-
-  <body>
 
     <div class="stars">
             <img class="star" src="./4starsStyle/star3.png">
@@ -81,91 +94,91 @@
                 </div>
             </div>
         </div>
+        <!-- END OF HEADER -->
+
+        <h1>✯Menu✯</h1>
 
     <article>
-        <section>
-            <div class="container">
-                <div class = "item">
-                    <br><br>
-                    <h1 style="text-align: center;"> appetizers </h2>
-                        <h3 style="text-align: center;">Thai Pomelo salad with char-grilled scarlet prawns, Asian 
-                            citron, chili jam and gapi khoei paste</h3>
-                            <h3 style="text-align: center;">****</h3>
-                        <h3 style="text-align: center;">Authentic Chinese Sesame Jellyfish tossed in traditional
-                            Chilli Sauce</h3>
-                            <h3 style="text-align: center;">****</h3>
-                        <h3 style="text-align: center;">Taiwanese smashed cucumbers with seasame oil and 
-                            garlic</h3>
-                        <h3 style="text-align: center;">****</h3>
-                        <h3 style="text-align: center;">Crispy Kimichijeon (Kimchi Pancake) with scallions and 
-                            Gochujang sauce</h3>
-                    <br><br>
-                </div>
-                <div class = "item">
-                    <img src="./4starsStyle/menu/appetizer.jpg" style="width:100%">
-                </div>
 
-                <div class = "item">
-                    <img src="./4starsStyle/menu/main.JPG" style="width:100%">
-                </div>
+            <section class="box">
 
-                <div class = "item">
-                    <br><br>
-                    <h1 style="text-align: center;"> mains </h2>
-                        <h3 style="text-align: center;">Giant grilled river prawn wrapped in Mulberry Leaves 
-                            and tamarind sauce</h3>
-                            <h3 style="text-align: center;">****</h3>
-                        <h3 style="text-align: center;">Mei Cai Kou Rou (Steamed Pork Belly) with preserved 
-                            mustard greens and Jasmine rice</h3>
-                            <h3 style="text-align: center;">****</h3>
-                        <h3 style="text-align: center;">Our Signature Beef Noodz, Taiwanese style beef noodles 
-                            with baby bok choy and braised shank </h3>
-                            <h3 style="text-align: center;">****</h3>
-                        <h3 style="text-align: center;">Dolsot Bibimbap with choice meat served in a hot 
-                            stone bowl</h3>
-                    <br><br>
-                </div>
+                    <div>
+                        <ul>
+                            <li><h2 style="text-align: center;"> appetizers </h2></li>
+                            <li>Thai Pomelo salad with char-grilled scarlet prawns, Asian 
+                                    citron, chili jam and gapi khoei paste</li>
+                            <li> ✯✯✯✯ </li>
+                            <li>Authentic Chinese Sesame Jellyfish tossed in traditional
+                                    Chilli Sauce</li>
+                            <li> ✯✯✯✯ </li>
+                            <li>Taiwanese smashed cucumbers with seasame oil and 
+                                    garlic</li>
+                            <li> ✯✯✯✯ </li>
+                            <li>Crispy Kimichijeon (Kimchi Pancake) with scallions and 
+                                    Gochujang sauce</li>
+                            <li><img src="./4starsStyle/menu/appetizer.jpeg" style="width:100%"></li>
+                        </ul>          
+                    </div>
 
-                <div class = "item">
-                    <br><br>
-                    <h1 style="text-align: center;"> desserts </h1>
-                        <h3 style="text-align: center;">Thai Kanom Chan, Steamed Pandan and Jasmine 
-                            Layered Coconut Cake</h3>
-                        <h3 style="text-align: center;">****</h3>
-                        <h3 style="text-align: center;">Hong Kong style Egg Waffle Cone with choice 
-                            icecream and toppings</h3>
-                            <h3 style="text-align: center;">****</h3>
-                        <h3 style="text-align: center;">Korean Bingsu, shaved ice dessert with sweet 
-                            toppings</h3>
-                            <h3 style="text-align: center;">****</h3>
-                        <h3 style="text-align: center;">Taiwanese Pinepapple Cake with a crisp crust and gooey 
-                            pineapple filling</h3>
-                    <br><br>
-                </div>
+            </section> 
+            
+            <section class = "box">
+                    <div>
+                            <ul>
+                            <li><h2 style="text-align: center;"> mains </h2></li>
+                            <li>Giant grilled river prawn wrapped in Mulberry Leaves 
+                                    and tamarind sauce</li>
+                            <li> ✯✯✯✯ </li>
+                            <li>Mei Cai Kou Rou (Steamed Pork Belly) with preserved 
+                                    mustard greens and Jasmine rice</li>
+                            <li> ✯✯✯✯ </li>
+                            <li>Our Signature Beef Noodz, Taiwanese style beef noodles 
+                                    with baby bok choy and braised shank </li>
+                            <li> ✯✯✯✯ </li>
+                            <li>Dolsot Bibimbap with choice meat served in a hot 
+                                    stone bowl</li>
+                            <li><img src="./4starsStyle/menu/main.jpg" style="width:100%"></li>  
+                            </ul>    
+                        </div>
+            </section>
 
-                <div class = "item">
-                    <img src="./4starsStyle/menu/dessert.jpg" style="width:100%">
-                </div>
+            <section class = "box">
+                    <div>
+                            <ul>
+                            <li><h2 style="text-align: center;"> desserts </h2></li>
+                            <li>Thai Kanom Chan, Steamed Pandan and Jasmine 
+                                    Layered Coconut Cake</li>
+                            <li> ✯✯✯✯ </li>
+                            <li>Hong Kong style Egg Waffle Cone with choice 
+                                    icecream and toppings</li>
+                            <li> ✯✯✯✯ </li>
+                            <li>Korean Bingsu, shaved ice dessert with sweet 
+                                    toppings</li>
+                            <li> ✯✯✯✯ </li>
+                            <li>Taiwanese Pinepapple Cake with a crisp crust and gooey 
+                                    pineapple filling</li>
+                            <li><img src="./4starsStyle/menu/dessert.jpeg" style="width:100%"></li>
+                            </ul>
+                        </div>
+            </section>
 
-                <div class = "item">
-                    <img src="./4starsStyle/menu/drink.jpg" style="width:100%">
-                </div>
 
-                <div class = "item">
-                    <br><br>
-                    <h1 style="text-align: center;"> drinks </h1>
-                        <h3 style="text-align: center;">Lemongrass and Ginger Thai Mojito</h3>
-                        <h3 style="text-align: center;">****</h3>
-                        <h3 style="text-align: center;">Vanilla Chai Baileys Boba</h3>
-                        <h3 style="text-align: center;">****</h3>
-                        <h3 style="text-align: center;">Yakult Soju Shots</h3>
-                        <h3 style="text-align: center;">****</h3>
-                        <h3 style="text-align: center;">Oolong Lychee Martini</h3>
-                    <br><br>
-                </div>
-            </div>
+            <section class = "box">
+                    <div>
+                            <ul>
+                            <li><h2 style="text-align: center;"> drinks </h2></li>
+                            <li>Lemongrass and Ginger Thai Mojito</li>
+                            <li> ✯✯✯✯ </li>
+                            <li>Vanilla Chai Baileys Boba</li>
+                            <li> ✯✯✯✯ </li>
+                            <li>Yakult Soju Shots</li>
+                            <li> ✯✯✯✯ </li>
+                            <li>Oolong Lychee Martini</li>  
+                            <li><img src="./4starsStyle/menu/drink.jpeg" style="width:100%"></li>
+                            </ul>
+                    </div>
+            </section>
 
-        </section>
     </article>
 
     <div class="footer">
@@ -175,5 +188,6 @@
             <h2 style="color:#be3439; text-align:center; font-size: 20px; margin-top:0px;">4 STARS</h2>
         </div>
 
-  </body>
 </html>
+
+

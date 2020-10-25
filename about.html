@@ -3,133 +3,75 @@
 
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
         <style>
-            @media screen and (max-width: 1560px) {
-                body {
-                    /* background-image: linear-gradient(-59deg, #be3439 10%,  #fae7d0 50%); */
-                }
-
-                #chefBG {
-                    position: relative;
-                    height: 900px;
-
-                    background-image: url("./4starsStyle/about/asianChefSushi.jpg");
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                }
-
-                .parallax {
-                    background-attachment: scroll;
-                }
-
-                #chefInfoContainer{
-                    position: relative;
-                    height: 250px;
-                    top: 56%;
-
-                    background-color: beige;
-                    
+            @media screen and (max-width: 1700px) {
+                #container {
+                    height: 100%;
                     display: flex;
                     justify-content: center;
+                    flex-direction: column;
                 }
 
-                #chefProfile {
-                    position: relative;
-                    width: 190px;
-                    height: 190px;
-                    top: 20px;
-
-                    border-radius: 80px;
-                    background-image: url("./4starsStyle/about/asianGuyProfile.jpg");
-                    background-repeat:no-repeat;
-                    background-size: cover;
-                    background-position: center;
-                }
-
-                #chefIntro {
-                    position: relative;
-                    width: 500px;
-                    top: 50px;
-                    padding-left: 30px;
-                }
-
-                #bgContainer {
-                    position: relative;
-                    /*margin-top: 120px;*/
-                    justify-content: center;
-                }
-
-                #explanationContainer {
-                    margin-top: 50px;
-                    display: flex;
-                    justify-content: center;
-                }
-
-                #slogan {
-                    position: relative;
-                    
-                    margin: 0 auto;
+                #message {
+                    font-size: 30px;
                     text-align: center;
                 }
-
+                
+                /* paragraph of restaurant values */
                 .valueExplain {
                     position: relative;
-                    height: 100px;
-                    width: 400px;
-                    top: 120px;
-                }
-
-                #explanation {
-                    margin-left: 70px;
-                    padding-left: 20px;
-                    
-                    border-left: solid;
-                    border-width: 10px;
-                    border-color: aquamarine;
-                }
-
-                #explanation2 {
-                    margin-right: 70px;
-                    padding-right: 20px;
-                    
-                    border-right: solid;
-                    border-width: 10px;
-                    border-color: aquamarine;
+                    text-align: center;
+                    font-size: 20px;
+                    margin: 10px;
+                    border: #be3439;
+                    border-style:groove;
                 }
 
                 .picture {
-                    height: 500px;
-                    width: 400px;
-
-                    background-color: red;
+                    max-width: 40%;
+                    height: auto;
+                    margin: 0 auto;
                 }
 
-                #originsContainer {
-                    margin-top: 50px;
-                    position: relative;
-                    height: 500px;
+                #explanationContainer {
+                    display:flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    margin: 20px;
                 }
 
                 /* slideshow */
                 #slideshowContainer {
-                    display: flex;
+                    margin: 0 auto;
                     justify-content: center;
+                    width: 70%;
+                    height: 70%;
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 14px;
+                    margin-bottom: 20px;
                 }
 
                 .slide {
-                    height: 400px;
-                    width: 600px;
+                    height: 60%;
+                    width: 70%;
                     display: none;
                 }
 
-                .active {
+                .text {
+                    font-size: 29px;
+                }
+
+                .initialActive {
                     display: block;
                 }
 
-                /* Next & previous buttons */
                 .prev, .next {
-                    position: absolute;
+                    position: relative;
+                    height: 50px;
+                    top: 30%;
                     cursor: pointer;
                     width: auto;
                     color: black;
@@ -137,33 +79,111 @@
                     font-size: 50px;
                     transition: 0.6s ease;
                     border-radius: 0 3px 3px 0;
+                    
                     user-select: none;
-                    top: 25%;
                 }
 
                 .prev {
-                    left: 300px;
+                    left: -2%;
                 }
 
-                /* Position the "next button" to the right */
                 .next {
-                    right: 300px;
-                    border-radius: 3px 0 0 3px;
+                    right: -2%;
                 }
 
-                /* scroll icon */
-                .scrollButton{
-                    position: relative;
+            }
+            /* phone screen */ 
+            @media screen and (max-width: 768px) {
+
+                #container {
+                    height: 100%;
+                    display: flex;
                     justify-content: center;
+                    flex-direction: column;
                 }
 
-                #arrowDown {
+                #message {
+                    font-size: 30px;
+                    text-align: center;
+                }
+                
+                /* paragraph of restaurant values */
+                .valueExplain {
                     position: relative;
-                    width: 60px;
-                    height: 60px;
-                    left: 50%;
+                    text-align: center;
+                    font-size: 20px;
+                    margin: 10px;
+                    border: #be3439;
+                    border-style:groove;
+                }
+
+                .picture {
+                    max-width: 100%;
+                    height: auto;
+                    margin: 0 auto;
+                }
+
+                #picture1 {
+                    background-image: url("./4starsStyle/about/insideKitchen.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #explanationContainer {
+                    display:flex;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+
+                /* slideshow */
+                #slideshowContainer {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                }
+
+                .slide {
+                    height: 50%;
+                    width: 70%;
+                    display: none;
+                }
+
+                .text {
+                    font-size: 20px;
+                }
+
+                .initialActive {
+                    display: block;
+                }
+
+                .prev, .next {
+                    position: relative;
+                    height: 50px;
+                    top: 30%;
+                    cursor: pointer;
+                    width: auto;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 50px;
+                    transition: 0.6s ease;
+                    border-radius: 0 3px 3px 0;
+                    
+                    user-select: none;
+                }
+
+                .prev {
+                    left: -2%;
+                }
+
+                .next {
+                    right: -2%;
                 }
             }
+            
         </style>
     </head>
 
@@ -204,84 +224,56 @@
                 </div>
             </div>
         </div>
-        <div class = "parallax" id = "chefBG">
-            <h2>
-                Taste authentic Asia
+        <div id = "container"> <!-- column flex -->
+            <h1 style = "text-align: center;">✯Our Story✯ </h1>
+            <h2 style = "text-align: center;">
+                Who We Represent
             </h2>
-
-            <div id = "chefInfoContainer">
-                <div id="chefProfile">
-                
+            <!-- Inspiration: https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+            <div id="slideshowContainer"> <!-- row flex -->
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <div class="slide fade initialActive"> <!-- column flex-->
+                    <img src="./4starsStyle/about/taipei.jpg" style="width:100%">
+                    <div class="text">Taiwan has a long history of traditional food. Please enjoy our pieces of culinary arts of which recipes were passed down for generations.
+                    </div>
                 </div>
-                <div id = "chefIntro">
-                    <h4>
-                        With years of experience in culinary arts under his belt, chef Yao tirelessly practiced to preserve
-                        Taiwanese culture in his works. Born a Taiwanese national, at a young age he mastered recipe passed
-                        down for generations, and in every noodle he carefully etches the spirit of Taiwan.
-                    </h4>
+                <div class="slide fade">
+                    <img src="./4starsStyle/about/hongkong.jpg" style="width:100%">
+                    <div class="text">From the ports of Hongkong, we bring you exciting cuisines that take you on a journey through the cultural fusion of the East and West.</div>
                 </div>
-                <a class="prev" onclick="">&#10094;</a>
-                <a class="next" onclick="">&#10095;</a>
+                <div class="slide fade">
+                    <img src="./4starsStyle/about/thailand.jpg" style="width:100%">
+                    <div class="text">Welcome to Thailand. Exquisite dishes as beautiful as their country await you.</div>
+                </div>
+                <div class="slide fade">
+                    <img src="./4starsStyle/about/korea.jpg" style="width:100%">
+                    <div class="text"> Take a delicious bite out of Korea and feel the warmth of their culture. </div>
+                </div>
+                <!-- Next and previous buttons -->
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
-        </div>
-        <div id = "bgContainer">
             <div id = "explanationContainer">
-                <div class="picture">
-                
-                </div>
-                <div class = "valueExplain" id="explanation">
-                    <h3>
-                        Our passion is not only to make traditional Asian food more accessible around the world but also to do it right. 
-                        We ensure that you get to rekindle your cultural pallette regardless of where you are.
-                    </h3>
-                </div>
-            </div>
-            <div id="originsContainer">
-                <h3 style="text-align: center;">
-                    We bring home to you
-                </h3>
-                <div id="slideshowContainer">
-                    <div class="slide fade active">
-                        <img src="./4starsStyle/about/taipei.jpg" style="width:100%">
-                        <div class="text">Taiwan has a long history of traditional food. We're proud to present our main Taiwanise 
-                            dish, Beef Noodz, of which recipe was passed down for generations.
-                        </div>
-                    </div>
-                    <div class="slide fade">
-                        <img src="./4starsStyle/about/hongkong.jpg" style="width:100%">
-                        <div class="text">We bring you from HongKong </div>
-                    </div>
-                    <div class="slide fade">
-                        <img src="./4starsStyle/about/thailand.jpg" style="width:100%">
-                        <div class="text">Caption Three</div>
-                    </div>
-                    <div class="slide fade">
-                        <img src="./4starsStyle/about/korea.jpg" style="width:100%">
-                        <div class="text">Caption Three</div>
-                    </div>
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
-                </div>
-            </div>
-            <div id="explanationContainer">
-                <div class="valueExplain" id="explanation2">
-                    <h3>
+                <div class="valueExplain">
+                    <h3 id="explanation2">
                         We take great care and effort in supporting the local
                         agriculture, bringing the <em>freshest ingredients</em>
                         to our kitchen, to your plate.
                     </h3>
                 </div>
-                <div class="picture">
-            
+                <img class="picture" src="./4starsStyle/about/farm.jpg">
+            </div>
+            <div id = "explanationContainer">
+                <div class="valueExplain">
+                    <h3 id="ex>planation">
+                        Our passion is not only to make traditional Asian food more accessible around the world but also to do
+                        it right.
+                        We ensure that you get to rekindle your cultural pallette regardless of where you are.
+                    </h3>
                 </div>
+                <img class="picture" src="./4starsStyle/about/insideKitchen.jpg">
             </div>
         </div>
-        <br/>
         <br />
-        <br />
-                <br />
-                <br />
 
         <!-- CODE FOR FOOTER -->
         <div class="footer">
@@ -293,29 +285,49 @@
     </body>
     <script>
         var currentSlide = 0;
-
+        var slides = $(".slide");
+        console.log(slides);
+        showSlide(0);
         function changeSlide(velocity) {
-            var slides = document.getElementsByClassName("slide");
+            console.log("changing slide")
 
-            if ( velocity < 0 ) {
+            if ( velocity > 0 ) {
                 if ( currentSlide == 0 ) {
-                    showSlide(slides, slides.length - 1);
+                    showSlide(1);
                 }
+                else if ( currentSlide == 1 ) {
+                    showSlide(2);
+                }
+                else if (currentSlide == 2) {
+                    showSlide(3);
+                }
+                else if (currentSlide == 3) {
+                    showSlide(0);
+                }
+
             }
             else {
-
+                if (currentSlide == 0) {
+                    showSlide(3);
+                }
+                else if (currentSlide == 1) {
+                    showSlide(0);
+                }
+                else if (currentSlide == 2) {
+                    showSlide(1);
+                }
+                else if (currentSlide == 3) {
+                    showSlide(2);
+                }
             }
         }
 
-        function showSlide(slides, index) {
-            for ( var indexSlides in slides ) {
-                if ( indexSlides == index ) {
-                    slides[index].style.display = "block";
-                }
-                else {
-                    slides[index].style.display = "none";
-                }
-            }
+        function showSlide(index) {
+            var slides = $(".slide");
+            $(slides[currentSlide]).fadeOut(200, function() {
+                currentSlide = index;
+                $(slides[index]).fadeIn(200);
+            });
         }
 
 

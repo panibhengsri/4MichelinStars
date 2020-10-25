@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html>
+
+    <script>
+        function popUp() {
+            alert("Your message has been sent! Please allow 3-5 business days for a reply");
+            document.getElementById("myForm").reset();
+        }
+    </script>
+
     <style>
+
+        .col {
+            column-count: 3;
+        }
+
+        th {
+            color: #be3439;
+            font-family: "Times New Roman", times, serif;
+            font-size: 20px;
+        }
+
+        table {
+            width: 100%;
+        }
+
         label {
             color: #be3439;
             font-family: "Times New Roman", times, serif;
@@ -84,6 +107,28 @@
             font-size: 40px;
         }
 
+        article {
+                display: flex; 
+                flex-wrap: wrap;
+                justify-content: center;
+                }
+
+        h1 {
+            text-align: center;
+        }
+
+        .box {
+        display: flex;
+        border: 30px  double #fae7d0; 
+        text-decoration:none; 
+        color:#000000; 
+        font-weight: bold; 
+        flex-basis: 150px;
+        flex-grow:1;
+        margin:5px;
+        padding: 30px 10px;
+    }
+
     </style>
   <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -129,57 +174,67 @@
             </div>
         </div>
     </div>
-
-        <!-- CODE FOR HEADER -->
-
+    <!-- CODE FOR HEADER -->
+    <h1>✯Reservations✯</h1>
 
     <article>
         <section>
-            <h3>
-                Due to popularity and limited space in the restaurants, it is 
+            
+            <div class = "box">
+                <p style = "text-align:center;">Due to popularity and limited space in the restaurants, it is 
                 highly recommended that reservations are made before. Please 
                 fill out the form below and we will contact you to confirm your 
-                reservation.
-            </h3>
+                reservation.</p>
+            </div>
 
-            <form action="/action_page.php">
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname" required><br><br>
+            <div class = "box">
+                    <form id = "myForm" onsubmit = "popUp(); return false">
+                        <table style = "text-align:center;">
+                        <tr>
+                            <th>First name:</th>
+                            <th><input type="text" id="fname" name="fname" required></th>
+                            <th>Last name:</th>
+                            <th><input type="text" id="lname" name="lname" required></th>
+                        </tr>
 
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname" required><br><br>
+                        <tr>
+                            <th>Email:</th>
+                            <th><input type="text" id="email" name="email"></th>
+                            <th>Phone:</th>
+                            <th><input type="tel" id="phone" name="phone" placeholder= "123-456-7890" pattern ="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></th>
+                        </tr>
 
-                <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email"><br><br>
+                        <tr>
+                                <th>Number of Adults:</th>
+                                <th><input type="number" id="adults" name="adults" min="1" max="10" required></th>
+                                <th>Number of Children:</th>
+                                <th><input type="number" id="children" name="children" min="1" max="10" required></th>
+                        </tr>
 
-                <label for="phone">Phone:</label><br>
-                <input type="tel" id="phone" name="phone" pattern ="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+                        <tr>
+                            <th>Date of Reservation:</th>
+                            <th><input type="date" id="date" name="date" required></th>
+                            <th>Time of Reservation:</th>
+                            <th><input type="time" id="time" name="time" min="11:00" max ="22:00" required></th>
+                        </tr>
 
-                <label for="adults">Number of Adults:</label><br>
-                <input type="number" id="adults" name="adults" min="1" max="10" required><br><br>
+                        <tr>
+                            <th>Branch:</th>
+                            <th><select id="branch" name="branch" required />
+                                <option value = "th">Bangkok, Thailand</option>
+                                <option value ="hk">Causeway Bay, Hong Kong</option>
+                                <option value ="kr">Seoul, Korea</option>
+                                <option value = "tw">Taipei, Taiwan</option>
+                            </select></th>
+                            <th>Special Request:</th>
+                            <th><input type="text" id="request" name="request"></th>
+                        </tr>
+                        </table>
 
-                <label for="children">Number of Children:</label><br>
-                <input type="number" id="children" name="children" min="1" max="10" required><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+            </div>
 
-                <label for="date">Date of Reservation:</label><br>
-                <input type="date" id="date" name="date" required><br><br>
-
-                <label for="time">Time of Reservation:</label><br>
-                <input type="time" id="time" name="time" min="11:00" max ="22:00" required><br><br>
-
-                <label for="branch">Branch:</label><br>
-                <select id="branch" name="branch" required>
-                    <option value = "th">Bangkok, Thailand</option>
-                    <option value ="hk">Causeway Bay, Hong Kong</option>
-                    <option value ="kr">Seoul, Korea</option>
-                    <option value = "tw">Taipei, Taiwan</option>
-                </select><br>
-
-                <label for="request">Special Request:</label><br>
-                <input type="text" id="request" name="request"><br><br>
-                
-                <input type="submit" value="Submit">
-            </form>
         </section>
     </article>
 

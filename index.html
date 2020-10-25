@@ -1,91 +1,91 @@
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
   </head>
   
   <body>
     <!-- CODE FOR HEADER -->
-  <div class="navbar" id="navbar">
-    <img src="./4starsStyle/4starsLogo.png" style="height:25px; float:left; margin: 15px;" alt="logo">
-    <a href="#">home</a>
-    <div class="dropdown">
-      <button class="dropbtn">about us</button>
-        <div class="dropdown-content">
-          <a href="about.html">our story</a>
-          <a href="locations.html">locations</a>
-          <a href="review.html">reviews</a>
+    <div class="header">
+        <div>
+            <a class="logo" href="./index.html"><img src="./4starsStyle/4starsLogo.png" id="logoImg" alt="logo"></a>
+        </div>
+        <div class="navbar">
+            <div class="dropdown">
+                <button onclick="location.href='./menu.html'" type="button" class="dropbtn menubtn">Menu</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                    <a class="hlpage" href="./about.html">Our Story</a>
+                    <a class="hlpage" href="./locations.html">Locations</a>
+                    <a class="hlpage" href="./review.html">Reviews</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Get in Touch</button>
+                <div class="dropdown-content">
+                    <a class="hlpage" href="./contact.html">Contact Us</a>
+                    <a class="hlpage" href="./reserve.html">Reservations</a>
+                </div>
+            </div>
         </div>
     </div>
-    <a href="menu.html">menu</a>
-    <div class="dropdown">
-      <button class="dropbtn">get in touch</button>
-        <div class="dropdown-content">
-          <a href="contact.html">contact</a>
-          <a href="reserve.html">reservations</a>
-        </div>
-    </div>
-  </div>
   
   <!-- FIRST SECTION OF HOMEPAGE -->
-  <section style="height:600px;">
-  <div class="left"> <img src="./4starsStyle/4starsFace.png" style="margin-bottom: 150px; width:200px;"> </div>
-  <div class="right"> <img src="./4starsStyle/4starsHand.png" style="margin-top:150px; width:400px;"> </div>
-  <div style="margin-top: 50px; margin-bottom:150px;margin-left:200px;" class="img-container">
+  <section style="display:flex; justify-content:space-between; height:550px;">
+  <div style="flex-shrink:1; position:relative;" class="left"> 
+    <img src="./4starsStyle/4starsFace.png"
+     style="margin-bottom: 150px; padding-right: 200px; width:200px;"> </div>
+  <div style="flex-shrink:1; margin-top: 100px; margin-bottom:150px;" 
+  class="img-container">
     <img src="./4starsStyle/4starsLogo.png" style="height:70px;" alt="logo">
     <h1 style= "margin-top:0px;">4 STARS</h1>
+  </div>
+  <div style="flex-shrink:1; margin-top:80px; position:relative;" class="right"> 
+    <img src="./4starsStyle/4starsHand.png" style="margin-top:150px; width:400px;"> 
   </div>
 </section>
      
   <!-- SECOND SECTION OF HOMEPAGE -->
-  <section style="background-color: #be3439; padding-top: 40px; height:600px;">
-    <div style="margin-bottom:150px; margin-left:200px;" class="img-container">
-      <img src="./4starsStyle/4starsLogo.png" style="margin-top: 50px; height:70px;" alt="logo">
-    </div>
-    <div class="img-container">
+  <section style="display:flex; justify-content:center; background-color: #be3439;
+   padding:200px; height:300px;">
       <div class="left">
-        <h2 style= "margin-top:0px;">TASTE THE STARS</h2>
-        <p style="color:#faf5ec;"> Serving you a worldwide taste, with star dishes from across Asia. </p>
+        <h2>TASTE THE STARS</h2>
+        <p style="color:#faf5ec; width:500px; text-align:right; font-size:25px;">Serving you a 
+          worldwide taste, with dishes that are out of this world. From Hong Kong
+          to Thailand, and from Taiwan to Korea, enjoy flavours from all corners
+          of Asia.</p>
       </div>
       <div class="right">
         <img src="./4starsStyle/4starsBowl.png" style="width:300px;">
-      </div>
-    </div>  
+      </div>  
   </section>
 
   <!-- THIRD SECTION OF HOMEPAGE -->
-  <section style="background-color: #eebe2f; height:600px;">
+  <section style="display:flex; justify-content:center; background-color: #eebe2f;
+   padding:150px; height:300px;">
     <div class="left">
-      <img src="./4starsStyle/4starsMenu.png" style="width:300px;">
+      <img src="./4starsStyle/4starsMenu.gif" style="width:300px; margin:15px;">
     </div>
-    <div class="right">
+    <div class="right" style="margin-top:20px;">
       <h2 style="color:#be3439;">MENU</h2>
-      <p style="color:#faf5ec;">Curated specially by our list of experts, showcasing the best Asia has to offer.</p>
+      <p style="color:#faf5ec; width:500px;font-size:25px;">Curated specially by our team of 
+        experts, changing with the seasons. Come take your pick from favourites such
+         as authentic Chinese jellyfish salad and exquisite Thai kanom chan.</p>
+      <a href="./menu.html" style="color:#faf5ec;">learn more</a>
     </div>
   </section>
   
     <!-- CODE FOR FOOTER -->
    <div class="footer">
      <div class="img-container">
-      <img src="./4starsStyle/4starsLogoRed.png" style="height: 20px; margin-top: 15px;" alt="logo, red">
+      <img src="./4starsStyle/4starsLogoRed.png" style="height: 20px; 
+      margin-top: 15px;" alt="logo, red">
     </div>
-     <h2 style="color:#be3439; text-align:center; font-size: 20px; margin-top:0px;">4 STARS</h2>
+     <h2 style="color:#be3439; text-align:center; font-size: 20px; margin-top:0px;">
+       4 STARS</h2>
    </div>
-    
-   <!-- CODE TO FIX HEADER -->
-   <script>
-   window.onscroll = function(){myFunction()};
-   var navbar = document.getElementById("navbar");
-   var sticky = navbar.offsetTop;
-   function myFunction(){
-     if (window.pageYOffset >= sticky) {
-       navbar.classList.add("sticky");
-     }else{
-       navbar.classList.remove("sticky");
-     }
-   }
-   </script>
-    
     
     
   </body>
