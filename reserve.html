@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+
+    <script>
+        function popUp() {
+            alert("Your message has been sent! Please allow 3-5 business days for a reply");
+        }
+    </script>
+
     <style>
         label {
             color: #be3439;
@@ -165,7 +172,7 @@
             </div>
 
             <div class = "box">
-                    <form action="/action_page.php">
+                    <form onsubmit = "popUp(); return false"></form>
                         <p>First name: <input type="text" id="fname" name="fname" required><br><br></p>
                         <p>Last name: <input type="text" id="lname" name="lname" required><br><br></p>
                         <p>Email: <input type="text" id="email" name="email"><br><br></p>
