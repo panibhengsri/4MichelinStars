@@ -179,23 +179,46 @@
 
             <div class = "box">
                     <form id = "myForm" onsubmit = "popUp(); return false">
-                        <div class = "col">
-                        <p>First name: <input type="text" id="fname" name="fname" required /><br><br></p>
-                        <p>Last name: <input type="text" id="lname" name="lname" required /><br><br></p>
-                        <p>Email: <input type="text" id="email" name="email" /><br><br></p>
-                        <p>Phone: <input type="tel" id="phone" name="phone" placeholder= "123-456-7890" pattern ="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /><br><br></p>
-                        <p>Number of Adults: <input type="number" id="adults" name="adults" min="1" max="10" required /><br><br></p>
-                        <p>Number of Children: <input type="number" id="children" name="children" min="1" max="10" required /><br><br></p>
-                        <p>Date of Reservation: <input type="date" id="date" name="date" required /><br><br></p>
-                        <p>Time of Reservation: <input type="time" id="time" name="time" min="11:00" max ="22:00" required /><br><br></p>
-                        <p>Branch: <select id="branch" name="branch" required />
+                        <tr>
+                            <th>First name:</th>
+                            <th><input type="text" id="fname" name="fname" required></th>
+                            <th>Last name:</th>
+                            <th><input type="text" id="lname" name="lname" required></th>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <th><input type="text" id="email" name="email"></th>
+                            <th>Phone:</th>
+                            <th><input type="tel" id="phone" name="phone" placeholder= "123-456-7890" pattern ="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></th>
+                        </tr>
+                        <tr>
+                                <th>Number of Adults:</th>
+                                <th><input type="number" id="adults" name="adults" min="1" max="10" required></th>
+                                <th>Number of Children:</th>
+                                <th><input type="number" id="children" name="children" min="1" max="10" required></th>
+                        </tr>
+
+                        <tr>
+                            <th>Date of Reservation:</th>
+                            <th><input type="date" id="date" name="date" required></th>
+                            <th>Time of Reservation:</th>
+                            <th><input type="time" id="time" name="time" min="11:00" max ="22:00" required></th>
+
+                        </tr>
+
+                        <tr>
+                            <th>Branch:</th>
+                            <th><select id="branch" name="branch" required />
                                 <option value = "th">Bangkok, Thailand</option>
                                 <option value ="hk">Causeway Bay, Hong Kong</option>
                                 <option value ="kr">Seoul, Korea</option>
                                 <option value = "tw">Taipei, Taiwan</option>
-                            </select><br><br></p>
-                        <p>Special Request: <input type="text" id="request" name="request" /><br><br></p>
-                        </div>
+                            </select></th>
+                            <th>Special Request:</th>
+                            <th><input type="text" id="request" name="request"></th>
+
+                        <tr>
+
                         <input type="submit" value="Submit">
                     </form>
             </div>
