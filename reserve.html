@@ -10,10 +10,6 @@
 
     <style>
 
-        .col {
-            column-count: 3;
-        }
-
         th {
             color: #be3439;
             font-family: "Times New Roman", times, serif;
@@ -98,6 +94,7 @@
         section {
             border-radius: 5px;
             padding: 20px;
+            width: 100%;
         }
 
 
@@ -189,7 +186,7 @@
 
             <div class = "box">
                     <form id = "myForm" onsubmit = "popUp(); return false">
-                        <table style = "text-align:center;">
+                        <table style = "text-align:center; width: 100%;">
                         <tr>
                             <th>First name:</th>
                             <th><input type="text" id="fname" name="fname" required></th>
