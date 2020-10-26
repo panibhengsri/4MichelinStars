@@ -17,6 +17,18 @@
                     flex-direction: column;
                 }
 
+                .box {
+                    display: flex;
+                    border: 30px  double #fae7d0; 
+                    text-decoration:none; 
+                    color:#000000; 
+                    font-weight: bold; 
+                    flex-basis: auto;
+                    flex-grow:1;
+                    margin:5px;
+                    padding: 30px 10px;
+                }
+
                 #message {
                     font-size: 30px;
                     text-align: center;
@@ -28,8 +40,11 @@
                     text-align: center;
                     font-size: 80px;
                     margin: 10px;
-                    border: #be3439;
-                    border-style:groove;
+                
+                }
+
+                .valueExplain h3{
+                    font-size: 40px;
                 }
 
                 .picture {
@@ -44,6 +59,8 @@
                     flex-direction: row;
                     margin: 20px;
                 }
+
+
 
                 /* slideshow */
                 #slideshowContainer {
@@ -65,6 +82,7 @@
 
                 .text {
                     font-size: 29px;
+                    color: #be3439;
                 }
 
                 .initialActive {
@@ -107,6 +125,18 @@
                     flex-direction: column;
                 }
 
+                .box {
+                    display: flex;
+                    border: 30px  double #fae7d0; 
+                    text-decoration:none; 
+                    color:#000000; 
+                    font-weight: bold; 
+                    flex-basis: auto;
+                    flex-grow:1;
+                    margin:5px;
+                    padding: 30px 10px;
+                }
+
                 #message {
                     font-size: 30px;
                     text-align: center;
@@ -116,10 +146,12 @@
                 .valueExplain {
                     position: relative;
                     text-align: center;
-                    font-size: 20px;
+                    font-size: 40px;
                     margin: 10px;
-                    border: #be3439;
-                    border-style:groove;
+                }
+
+                .valueExplain h3{
+                    font-size: 30px;
                 }
 
                 .picture {
@@ -155,6 +187,7 @@
 
                 .text {
                     font-size: 29px;
+                    color: #be3439;
                 }
 
                 .initialActive {
@@ -200,14 +233,29 @@
                     text-align: center;
                 }
                 
+                .box {
+                    display: flex;
+                    border: 30px  double #fae7d0; 
+                    text-decoration:none; 
+                    color:#000000; 
+                    font-weight: bold; 
+                    flex-basis: auto;
+                    flex-grow:1;
+                    margin:5px;
+                    padding: 30px 10px;
+                }
+
                 /* paragraph of restaurant values */
                 .valueExplain {
                     position: relative;
                     text-align: center;
                     font-size: 20px;
                     margin: 10px;
-                    border: #be3439;
-                    border-style:groove;
+                
+                }
+
+                .valueExplain h3{
+                    font-size: 20px;
                 }
 
                 .picture {
@@ -240,6 +288,7 @@
 
                 .text {
                     font-size: 20px;
+                    color: #be3439;
                 }
 
                 .initialActive {
@@ -342,7 +391,7 @@
                 <!-- Next and previous buttons -->
                 <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
-            <div id = "explanationContainer">
+            <div id = "explanationContainer" class = "box">
                 <div class="valueExplain">
                     <h3 id="explanation2">
                         We take great care and effort in supporting the local
@@ -352,7 +401,7 @@
                 </div>
                 <img class="picture" src="./4starsStyle/about/farm.jpg">
             </div>
-            <div id = "explanationContainer">
+            <div id = "explanationContainer" class = "box">
                 <div class="valueExplain">
                     <h3 id="ex>planation">
                         Our passion is not only to make traditional Asian food more accessible around the world but also to do
