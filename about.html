@@ -6,6 +6,96 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="./4starsStyle/4starsStyle.css">
         <style>
+            @media screen and (max-width: 2000px) {
+                body {
+                     -webkit-text-size-adjust: none;
+                }
+                #container {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+
+                #message {
+                    font-size: 30px;
+                    text-align: center;
+                }
+                
+                /* paragraph of restaurant values */
+                .valueExplain {
+                    position: relative;
+                    text-align: center;
+                    font-size: 80px;
+                    margin: 10px;
+                    border: #be3439;
+                    border-style:groove;
+                }
+
+                .picture {
+                    max-width: 50vw;
+                    max-height: 40vh;
+                    margin: 0 auto;
+                }
+
+                #explanationContainer {
+                    display:flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    margin: 20px;
+                }
+
+                /* slideshow */
+                #slideshowContainer {
+                    margin: 0 auto;
+                    justify-content: center;
+                    width: 70vw;
+                    height: 70vh;
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 10px;
+                    margin-bottom: 20px;
+                }
+
+                .slide {
+                    height: 60%;
+                    width: 70%;
+                    display: none;
+                }
+
+                .text {
+                    font-size: 29px;
+                }
+
+                .initialActive {
+                    display: block;
+                }
+
+                .prev, .next {
+                    position: relative;
+                    height: 50px;
+                    top: 30%;
+                    cursor: pointer;
+                    width: auto;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 50px;
+                    transition: 0.6s ease;
+                    border-radius: 0 3px 3px 0;
+                    
+                    user-select: none;
+                }
+
+                .prev {
+                    left: -2%;
+                }
+
+                .next {
+                    right: -2%;
+                }
+
+            }
+
             @media screen and (max-width: 1700px) {
                 body {
                      -webkit-text-size-adjust: none;
@@ -54,7 +144,7 @@
                     display: flex;
                     flex-direction: row;
                     font-size: 10px;
-                    margin-bottom: 20px;
+                    margin-bottom: 70px;
                 }
 
                 .slide {
